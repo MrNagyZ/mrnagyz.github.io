@@ -1,0 +1,13 @@
+div{
+    width: 300px;
+    border: 2px solid black;
+    border-top: none;
+    padding: 20px;   
+}
+.bottom{
+    border-bottom: none;
+}
+div:hover{
+    background-color: coral;
+    cursor: default;
+}

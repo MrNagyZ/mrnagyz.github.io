@@ -1,0 +1,27 @@
+.kek{
+    background-color: cornflowerblue;
+    width: 50px;
+    height: 50px;
+}
+.ures{
+    border: 2px solid cornflowerblue;
+    display: flex;
+    padding: 20px 10px;
+    width: 670px;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+.lila{
+    background-color: purple;
+    width: 50px;
+    height: 50px;
+}
+.piros{
+    border: 2px solid cornflowerblue;
+    background-color: tomato;
+    display: flex;
+    padding: 20px 10px;
+    width: 670px;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}

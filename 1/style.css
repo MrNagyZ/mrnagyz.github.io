@@ -1,0 +1,13 @@
+div{
+    font-weight: bolder;
+}
+.asteroid{
+    border: 1px solid green;
+}
+.big{
+    color: blue;
+    border: none;
+}
+p{
+    background-color: yellow;
+}
