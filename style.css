@@ -1,6 +1,11 @@
-
+html {
+    height: 100%;
+  }
 body{
-    background-color: lightgray;
+
+    background: rgb(50,50,50);
+background: linear-gradient(160deg, rgba(50,50,50,1) 0%, rgba(203,203,203,1) 67%, rgba(199,199,199,1) 100%);
+    height: initial;
 }
 #megnezo{
     width: 800px;
