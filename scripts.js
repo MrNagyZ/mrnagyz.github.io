@@ -1,17 +1,17 @@
 let photodata = [
     {
     photo: './img/1.jpg',
-    title: 'My title 1',
+    title: 'FINAL 4',
     leiras: 'Ez egy rendezvéyfotó 1'
 },
 {
     photo: './img/2.jpg',
-    title: 'My title 2',
+    title: 'FINAL 4',
     leiras: 'Ez egy rendezvéyfotó 2'
 },
 {
     photo: './img/3.jpg',
-    title: 'My title 3',
+    title: 'FINAL 4',
     leiras: 'Ez egy rendezvéyfotó 3'
 }];
 let ID = 0;

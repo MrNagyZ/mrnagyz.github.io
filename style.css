@@ -4,20 +4,20 @@ html {
 body{
 
     background: rgb(50,50,50);
-background: linear-gradient(160deg, rgba(50,50,50,1) 0%, rgba(203,203,203,1) 67%, rgba(199,199,199,1) 100%);
+background: linear-gradient(160deg, rgba(50,50,50,1) 0%,
+ rgba(203,203,203,1) 67%, rgba(199,199,199,1) 100%);
     height: initial;
 }
 #megnezo{
     width: 800px;
     height: 300px;
     margin: auto;
-    background-color: red;
     display: flex;
     position: relative;
 }
 .kep{
-    flex-grow: 15;
     width:100%;
+    background-color: #747474;
     position: relative;
     display: flex;
     justify-content: center;
@@ -56,7 +56,7 @@ background: linear-gradient(160deg, rgba(50,50,50,1) 0%, rgba(203,203,203,1) 67%
 #thumb{
     width: 800px;
     height: 100px;
-    background-color: green;
+    background-color: #474747;
     margin: auto;
 }
 #nagykep{
