@@ -1,16 +1,16 @@
 let photodata = [
     {
-    photo: 'img/1.jpg',
+    photo: './img/1.jpg',
     title: 'My title 1',
     leiras: 'Ez egy rendezvéyfotó 1'
 },
 {
-    photo: 'img/2.jpg',
+    photo: './img/2.jpg',
     title: 'My title 2',
     leiras: 'Ez egy rendezvéyfotó 2'
 },
 {
-    photo: 'img/3.jpg',
+    photo: './img/3.jpg',
     title: 'My title 3',
     leiras: 'Ez egy rendezvéyfotó 3'
 }];
