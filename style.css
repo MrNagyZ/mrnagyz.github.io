@@ -2,16 +2,20 @@ html {
     height: 100%;
   }
 body{
-
+    position: relative;
+    top: 10px;
     background: rgb(50,50,50);
-background: linear-gradient(160deg, rgba(50,50,50,1) 0%,
- rgba(203,203,203,1) 67%, rgba(199,199,199,1) 100%);
+    background: linear-gradient(160deg, rgba(50,50,50,1) 0%,
+         rgba(203,203,203,1) 67%, rgba(199,199,199,1) 100%);
     height: initial;
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 800px;
+    margin: auto;
 }
 #megnezo{
-    width: 800px;
     height: 300px;
-    margin: auto;
     display: flex;
     position: relative;
 }
@@ -33,13 +37,20 @@ background: linear-gradient(160deg, rgba(50,50,50,1) 0%,
 }
 .nyil{
     width: 50px;
-    background-color: white;
     text-align: center;
 }
 .helper{
     height: 300px;
     display: inline-block;
     vertical-align: middle;
+}
+.bal{
+    background-color: #dadada;
+    border-top-left-radius: 10px;
+}
+.jobb{
+    background-color: #dadada;
+    border-top-right-radius: 10px;
 }
 #bal{
     display: inline-block;
@@ -55,8 +66,8 @@ background: linear-gradient(160deg, rgba(50,50,50,1) 0%,
 }
 #thumb{
     width: 800px;
-    height: 100px;
-    background-color: #474747;
+    height: 80px;
+    background-color: #555;
     margin: auto;
 }
 #nagykep{
