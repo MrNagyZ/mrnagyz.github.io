@@ -19,6 +19,7 @@ let loadPhoto = (ID) => {
 $('#nagykep').attr('src', photodata[ID].photo);
 $('#cim').text(photodata[ID].title);
 $('#leiras').text(photodata[ID].leiras);
+console.log(ID);
   }
 
   loadPhoto(ID);
