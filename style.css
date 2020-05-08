@@ -108,9 +108,9 @@ p{
     border: white 2px solid;
 }
 .hide{
-    color: white;
-    padding: 10px 5px;
-    background-color: rgba(0,0,0,0.6);
+    color: black;
+    padding: 8px 0px;
+    background-color: rgba(180, 180, 180, 0.8);
     position: absolute;
     font-size: 10px;
     text-align: center;
@@ -119,6 +119,7 @@ p{
     top: -40px;
     display: none;
     transition: 1s;
+    border-radius: 3px;
 }
 .kisbox{
     position: relative;
