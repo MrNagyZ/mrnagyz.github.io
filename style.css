@@ -108,9 +108,9 @@ p{
     border: white 2px solid;
 }
 .hide{
-    color: black;
+    color: white;
     padding: 8px 0px;
-    background-color: rgba(180, 180, 180, 0.8);
+    background-color: rgba(151, 150, 150, 0.8);
     position: absolute;
     font-size: 10px;
     text-align: center;
