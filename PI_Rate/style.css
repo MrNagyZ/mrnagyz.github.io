@@ -1,0 +1,110 @@
+body{
+    width: 800px;
+    height: 430px;
+    margin: auto;
+}
+.gombok{
+    width: 100%;
+    height: 30px;
+    background-color: burlywood;
+    display: flex;
+    align-items: center;
+}
+input{
+    margin-left: 10px;
+}
+.stat{
+    width: 100%;
+    height: 183px;
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.field{
+    width: 100%;
+    height: 430px;
+    position: relative;
+    text-align: center;
+    display: flex;
+}
+
+#field_img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.home, .away{
+    position: absolute;
+    cursor: pointer;
+}
+
+.post {
+    /* background-color: blueviolet; */
+    width: 93px;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 25%, 18% 25%, 18% 75%, 99% 75%, 100% 100%, 0 100%);
+}
+.away.post{
+    right: 0;
+    transform: rotate(180deg);
+}
+.corner{
+    /* background-color: blue; */
+    width: 30px;
+    height: 30px;
+}
+.home.corner{
+    left: 95px;
+}
+.away.corner{
+    right: 95px;
+}
+.top.corner{
+    top: 21px;
+}
+.bottom.corner{
+    bottom: 21px;
+}
+
+.grass{
+    width: 305px;
+    height: 390px;
+    top: 20px;
+    left: 93px;
+}
+.away.grass{
+    left: 402px;
+}
+.sog{
+    /* background-color: blueviolet; */
+    width: 70px;
+    height: 185px;
+    top: 123px;
+    left: 20px;
+}
+.away.sog{
+    left: 710px;
+}
+
+table, td, th{
+
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    width: 100%;
+}
+td{
+    width: 55px;
+}
+.kozep{
+    border-right-width: 4px;
+}
+
+.card{
+    width: 50px;
+    cursor: pointer;
+}

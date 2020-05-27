@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PI Rate statistics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gombok">
+        <input type="button" value="START">
+        <input type="button" value="HOME GOAL" class="homegoal">
+        <input type="button" value="AWAY GOAL" class="awaygoal">
+    </div>
+    <div class="stat">
+      <table>
+        <tr>
+            <th colspan=7 class="kozep">HOME</th>
+            <th colspan=7>AWAY</th>
+        </tr>
+        <tr>
+            <td>Goal</td>
+            <td>Shots on goal</td>
+            <td>Shots wide</td>
+            <td>Fauls commited</td>
+            <td>Yellow cards</td>
+            <td>Red cards</td>
+            <td class="kozep">Corners</td>
+            <td>Goal</td>
+            <td>Shots on goal</td>
+            <td>Shots wide</td>
+            <td>Fauls commited</td>
+            <td>Yellow cards</td>
+            <td>Red cards</td>
+            <td>Corners</td>
+        </tr>
+        <tr>
+            <td id="hg">0</td>
+            <td id="hsog">0</td>
+            <td id="hsw">0</td>
+            <td id="hfc">0</td>
+            <td id="hyc">0</td>
+            <td id="hrc">0</td>
+            <td id="hc" class="kozep">0</td>
+            <td id="ag">0</td>
+            <td id="asog">0</td>
+            <td id="asw">0</td>
+            <td id="afc">0</td>
+            <td id="ayc">0</td>
+            <td id="arc">0</td>
+            <td id="ac">0</td>
+        </tr>
+    </table>
+    <img src="img/whistle.png" class="homewhistle card">
+    <img src="img/yellow_card.jpg" class="homeyellow card">
+    <img src="img/red_card.jpg" class="homered card">
+    <img src="img/whistle.png" class="awaywhistle card">
+    <img src="img/yellow_card.jpg" class="awayyellow card">
+    <img src="img/red_card.jpg" class="awayred card">
+    </div>
+    <div class="field">
+        <img src="img/all.jpg" id="field_img">
+        <div class="home post hsw" id="hgcl"></div>
+        <div class="away post asw"></div>
+        <div class="home grass"></div>
+        <div class="away grass"></div>
+        <div class="home corner top"></div>
+        <div class="away corner top"></div>
+        <div class="home corner bottom"></div>
+        <div class="away corner bottom"></div>
+        <div class="home sog"></div>
+        <div class="away sog"></div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+</html>
