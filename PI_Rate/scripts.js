@@ -13,6 +13,13 @@ let ayc = 0;
 let arc = 0;
 let ac = 0;
 
+$(function () {
+    $("input").click(function (e) {
+        $(this).attr("id") = $(this).attr("id")++;
+    });
+});
+
+
 $('.home.sog').click(() => {
     hsog++;
     $("#hsog").text(hsog);

@@ -1,115 +1,37 @@
 body{
-    width: 800px;
-    height: 430px;
+    max-width: 800px;
+    max-height: 430px;
     margin: auto;
+    color: rgb(200, 200, 190);
+    background-color: rgb(27, 27, 27);
 }
+
+/* ***********************************   TOP   ************************************ */
+
 .gombok{
     width: 100%;
     height: 30px;
-    background-color: rgb(116, 116, 116);
     display: flex;
     align-items: center;
 }
 input{
     margin-left: 10px;
 }
+
+/* ***********************************   EREDMÉNYEK   ************************************ */
+
 .stat{
     width: 100%;
     height: 100px;
-    background-color: rgb(163, 163, 163);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-.field{
-    width: 100%;
-    height: 430px;
-    position: relative;
-    text-align: center;
-    display: flex;
-}
-
-#field_img{
-    width: 100%;
-    height: 100%;
-    margin: auto;
-}
-.home, .away{
-    position: absolute;
-    cursor: pointer;
-}
-
-.post {
-    //background-color: blueviolet;
-    width: 93px;
-    height: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 25%, 18% 25%, 18% 75%, 99% 75%, 100% 100%, 0 100%);
-}
-.away.post{
-    right: 0;
-    transform: rotate(180deg);
-}
-.corner{
-    background-color: rgb(167, 167, 167, 0.8);
-    width: 50px;
-    height: 50px;
-    text-align: center;
-}
-.home.corner{
-    left: 95px;
-}
-.away.corner{
-    right: 95px;
-}
-.top.corner{
-    top: 21px;
-}
-.bottom.corner{
-    bottom: 21px;
-}
-
-.grass{
-    background-color: rgb(167, 167, 167, 0.8);
-    width: 305px;
-    height: 390px;
-    top: 70px;
-    left: 93px;
-    clip-path: circle(30%);
-}
-.away.grass{
-    left: 402px;
-}
-.sog{
-    /* background-color: blueviolet; */
-    width: 70px;
-    height: 185px;
-    top: 123px;
-    left: 20px;
-}
-.away.sog{
-    left: 710px;
-}
-
-.whistle{
-    background-color: rgb(167, 167, 167, 0.8);
-    width: 70px;
-    height: 70px;
-    top: 50px;
-    left: 300px;
-    clip-path: circle(50%);
-}
-.whistle_kep{
-    width: 100%;
-    height: 100%;
-}
-.away.whistle{
-    left: 430px;
+    flex-wrap: wrap;  
 }
 table, td, th{
 
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid rgb(200, 200, 190);
     border-collapse: collapse;
 }
 table{
@@ -122,7 +44,125 @@ td{
     border-right-width: 4px;
 }
 
-.card{
-    width: 50px;
+/* ***********************************   PÁLYA Általános   ************************************ */
+
+.field{
+    /* width: 100%;
+    height: 100%; */
+    position: relative;
+    text-align: center;
+    display: flex;
+}
+
+#field_img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.home, .away{
+    position: absolute;
     cursor: pointer;
+}
+
+/* ***********************************   KAPU MELLETT   ************************************ */
+
+.post {
+    width: 11%;
+    height: 23%;
+    background-color: rgb(167, 167, 167, 0.6);
+}
+.away.post{
+    right: 0;
+}
+.bottom.post{
+    bottom: 0;
+}
+
+/* ***********************************   SZÖGLET   ************************************ */
+
+.corner{
+    background-color: rgb(167, 167, 167, 0.6);
+    width: 10%;
+    height: 10%;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 0.8%;
+    padding-bottom: 0.3%;
+}
+.home.corner{
+    left: 12%;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    }
+.away.corner{
+    right: 12%;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+.top.corner{
+    top: 21px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+}
+.bottom.corner{
+    bottom: 21px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+.corner_kep{
+    width: 60%;
+    height: 80%;
+}
+
+/* ***********************************   PÁLYA   ************************************ */
+
+.grass{
+    display: flex;
+    background-color: rgb(167, 167, 167, 0.6);
+    width: 20%;
+    height: 30%;
+    top: 45%;
+    left: 20%;
+    border-radius: 40%;
+    align-items: center;
+    justify-content: center;
+}
+.away.grass{
+    left: 60%;
+}
+.filed_kep{
+    width: 40%;
+    height: 50%;
+}
+
+/* ***********************************   KAPU   ************************************ */
+
+.sog{
+    background-color: rgb(167, 167, 167, 0.6);
+    width: 8%;
+    height: 40%;
+    top: 30%;
+    left: 3%;
+}
+.away.sog{
+    left: 89%;
+}
+
+/* ***********************************   SÍP   ************************************ */
+
+.whistle{
+    background-color: rgb(167, 167, 167, 0.6);
+    width: 9%;
+    height: 15%;
+    top: 15%;
+    left: 35%;
+    border-radius: 20%;
+}
+.whistle_kep{
+    width: 80%;
+    height: 80%;
+}
+.away.whistle{
+    left: 56%;
 }

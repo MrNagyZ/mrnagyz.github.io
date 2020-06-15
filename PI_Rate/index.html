@@ -8,9 +8,13 @@
 </head>
 <body>
     <div class="gombok">
-        <input type="button" value="START">
-        <input type="button" value="HOME GOAL" class="homegoal">
-        <input type="button" value="AWAY GOAL" class="awaygoal">
+        <input type="button" value="START" id="start">
+        <input type="button" value="HOME GOAL" id="hg">
+        <input type="button" value="AWAY GOAL" class="ag">
+        <input type="button" value="HOME YELLOW CARD" class="homeyc">
+        <input type="button" value="AWAY YELLOW CARD" class="awayyc">
+        <input type="button" value="HOME RED CARD" class="homerc">
+        <input type="button" value="AWAY RED CARD" class="awayrc">
     </div>
     <div class="stat">
       <table>
@@ -60,16 +64,18 @@
     </div>
     <div class="field">
         <img src="img/all.jpg" id="field_img">
-        <div class="home post hsw" id="hgcl"></div>
-        <div class="away post asw"></div>
-        <div class="home grass"></div>
-        <div class="away grass"></div>
+        <div class="home post top hsw" id="hsw"></div>
+        <div class="home post bottom hsw"></div>
+        <div class="away post top asw"></div>
+        <div class="away post bottom asw"></div>
+        <div class="home grass"><img src="img/score.png" class="filed_kep"></div>
+        <div class="away grass"><img src="img/score.png" class="filed_kep"></div>
         <div class="home whistle"><img src="img/whistle.png" class="whistle_kep homewhistle"></div>
         <div class="away whistle"><img src="img/whistle.png" class="whistle_kep awaywhistle"></div>
-        <div class="home corner top"></div>
-        <div class="away corner top"></div>
-        <div class="home corner bottom"></div>
-        <div class="away corner bottom"></div>
+        <div class="home corner top"><img src="img/corner.png" class="corner_kep"></div>
+        <div class="away corner top"><img src="img/corner.png" class="corner_kep"></div>
+        <div class="home corner bottom"><img src="img/corner.png" class="corner_kep"></div>
+        <div class="away corner bottom"><img src="img/corner.png" class="corner_kep"></div>
         <div class="home sog"></div>
         <div class="away sog"></div>
     </div>
