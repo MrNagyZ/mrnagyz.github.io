@@ -1,0 +1,185 @@
+body{
+    max-width: 900px;
+    max-height: 600px;
+    margin: auto;
+    color: rgb(200, 200, 190);
+    background-color: rgb(27, 27, 27);
+    display: block;
+}
+a{
+    color: rgb(200, 200, 190);
+    text-decoration: none;
+}
+
+/* ***********************************   TOP   ************************************ */
+
+.gombok{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+input{
+    margin-left: 10px;
+}
+
+/* ***********************************   EREDMÉNYEK   ************************************ */
+
+#time{
+    font-size: 30px;
+}
+.stat{
+    width: 100%;
+    /* height: 130px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;  
+}
+table{
+    display: block;
+    overflow-x: auto;
+    /* white-space: nowrap; */
+}
+table, td, th{
+    text-align: center;
+    border: 1px solid rgb(200, 200, 190);
+    border-collapse: collapse;
+}
+td, th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+table{
+    width: 100%;
+}
+td{
+    width: auto;
+}
+.kozep{
+    border-right-width: 4px;
+}
+
+/* ***********************************   PÁLYA Általános   ************************************ */
+
+.field{
+    /* width: 100%;
+    height: 100%; */
+
+    position: relative;
+    text-align: center;
+    display: flex;
+}
+
+#field_img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.home, .away{
+    position: absolute;
+    cursor: pointer;
+}
+
+/* ***********************************   KAPU MELLETT   ************************************ */
+
+.post {
+    width: 11%;
+    height: 23%;
+    background-color: rgb(167, 167, 167, 0.6);
+}
+.away.post{
+    right: 0;
+}
+.bottom.post{
+    bottom: 0;
+}
+
+/* ***********************************   SZÖGLET   ************************************ */
+
+.corner{
+    background-color: rgb(167, 167, 167, 0.6);
+    width: 10%;
+    height: 10%;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 0.8%;
+    padding-bottom: 0.3%;
+}
+.home.corner{
+    left: 12%;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    }
+.away.corner{
+    right: 12%;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+.top.corner{
+    top: 5%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+}
+.bottom.corner{
+    bottom: 5%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+.corner_kep{
+    width: 60%;
+    height: 80%;
+}
+
+/* ***********************************   PÁLYA   ************************************ */
+
+.grass{
+    display: flex;
+    background-color: rgb(167, 167, 167, 0.6);
+    width: 25%;
+    height: 35%;
+    top: 45%;
+    left: 20%;
+    border-radius: 40%;
+    align-items: center;
+    justify-content: center;
+}
+.away.grass{
+    left: 55%;
+}
+.filed_kep{
+    width: 40%;
+    height: 50%;
+}
+
+/* ***********************************   KAPU   ************************************ */
+
+.sog{
+    background-color: rgb(167, 167, 167, 0.6);
+    width: 8%;
+    height: 40%;
+    top: 30%;
+    left: 3%;
+}
+.away.sog{
+    left: 89%;
+}
+
+/* ***********************************   SÍP   ************************************ */
+
+.whistle{
+    background-color: rgb(167, 167, 167, 0.6);
+    width: 9%;
+    height: 15%;
+    top: 15%;
+    left: 35%;
+    border-radius: 20%;
+}
+.whistle_kep{
+    width: 80%;
+    height: 80%;
+}
+.away.whistle{
+    left: 56%;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PI Rate statistics</title>
+    <link rel="stylesheet" href="ball_style.css">
+</head>
+<body>
+    <div class="gombok">
+        <input type="button" value="START" id="start">
+    </div>
+    <div class="stat">
+        <div id="time">00 : 00</div>
+      <table>
+        <tr>
+            <th class="kozep">HOME:<span id="hometeam"></span></th>
+            <th>AWAY<span id="awayteam"></span></th>
+        </tr>
+        <tr>
+            <td class="kozep">TIME: <span id="hometime"> 00 : 00</span></td>
+            <td>TIME: <span id="awaytime"> 00 : 00</span> </td>
+        </tr>
+        <tr>
+            <td class="kozep">RATE:<span id="homepercent"> 0,00%</span></td>
+            <td>RATE:<span id="awaypercent"> 0,00%</span></td>
+        </tr>
+
+    </table>
+
+    </div>
+    <div class="field">
+        <img src="img/all.jpg" id="field_img">
+        <div class="home grass" id="homegrass"><img src="img/score.png" class="filed_kep"></div>
+        <div class="away grass" id="awaygrass"><img src="img/score.png" class="filed_kep"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+</html>

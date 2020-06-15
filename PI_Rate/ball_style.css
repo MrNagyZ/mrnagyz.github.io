@@ -1,0 +1,91 @@
+body{
+    max-width: 900px;
+    max-height: 600px;
+    margin: auto;
+    color: rgb(200, 200, 190);
+    background-color: rgb(27, 27, 27);
+    display: block;
+}
+
+/* ***********************************   TOP   ************************************ */
+
+.gombok{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+input{
+    margin-left: 10px;
+}
+
+/* ***********************************   EREDMÉNYEK   ************************************ */
+
+#time{
+    font-size: 30px;
+}
+.stat{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;  
+}
+
+table, td, th{
+    text-align: center;
+    border: 1px solid rgb(200, 200, 190);
+    border-collapse: collapse;
+}
+table{
+    width: 100%;
+}
+td{
+    width: 50%;
+}
+.kozep{
+    border-right-width: 4px;
+}
+
+/* ***********************************   PÁLYA Általános   ************************************ */
+
+.field{
+    /* width: 100%;
+    height: 100%; */
+
+    position: relative;
+    text-align: center;
+    display: flex;
+}
+
+#field_img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.home, .away{
+    position: absolute;
+    cursor: pointer;
+}
+
+/* ***********************************   PÁLYA   ************************************ */
+
+.grass{
+    display: flex;
+    background-color: rgb(167, 167, 167, 0.6);
+    width: 33%;
+    height: 80%;
+    top: 10%;
+    left: 13%;
+    border-radius: 40%;
+    align-items: center;
+    justify-content: center;
+}
+.away.grass{
+    left: 54%;
+}
+.filed_kep{
+    width: 45%;
+    height: 34%;
+}
