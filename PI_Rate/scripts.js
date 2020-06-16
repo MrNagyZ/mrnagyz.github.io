@@ -26,60 +26,76 @@ let time_away = 0;
 let homepercent = 0;
 let awaypercent = 0;
 
-
-// $(function () {
-//     $("input").click(function (e) {
-//         // $(this).attr("id") = 1;
-//         $("#hg").text(hg);
-//         alert($(this).attr("id"));
-//     });
-// });
-
-    function getdate()
-    {
-        var now = new Date();
-        main_full_time = now - main_start_time;
-        var totalSeconds = parseInt(main_full_time / 1000);
-        var m = parseInt(totalSeconds / 60);
-        var s = totalSeconds % 60;
-        if(s<10){s = "0"+s;}
-        if(m<10){m = "0"+m;}
-        $("#time").text(m+" : "+s);
-
-        setTimeout(function(){getdate()}, 500);
+/* ***********************************   GOMBOK   ************************************ */
+ 
+$("input").click(function (e) {
+    switch ($(this).attr('id')) {
+        case "homegoal": hg++; $("#hg").text(hg); break;
+        case "awaygoal": ag++; $("#ag").text(ag); break;
+        case "homeyc": hyc++; $("#hyc").text(hyc); break;
+        case "awayyc": ayc++; $("#ayc").text(ayc); break;
+        case "homerc": hrc++; $("#hrc").text(hrc); break;
+        case "awayrc": arc++; $("#arc").text(arc); break;
     }
-     
+})
+
+/* ***********************************   TIMER   ************************************ */
+
+function getdate()
+{
+    var now = new Date();
+    main_full_time = now - main_start_time;
+    var totalSeconds = parseInt(main_full_time / 1000);
+    var m = parseInt(totalSeconds / 60);
+    var s = totalSeconds % 60;
+    if(s<10){s = "0"+s;}
+    if(m<10){m = "0"+m;}
+    $("#time").text(m+" : "+s);
+    setTimeout(function(){getdate()}, 500);
+}
+
+/* ***********************************   START   ************************************ */
  
-    $('#start').click(function(){
-        if (home != 2) {
-            main_start_time = new Date();
-            if (Boolean(home)) {
-                temp_home_time = main_start_time;
-            } else {
-                temp_away_time = main_start_time;
-            }
-            getdate();
+$('#start').click(function(){
+    if (home != 2) {
+        main_start_time = new Date();
+        if (Boolean(home)) {
+            temp_home_time = main_start_time;
+        } else {
+            temp_away_time = main_start_time;
         }
+        getdate();
+    }
+});
+
+/* ***********************************   TERFELVALSZTO   ************************************ */
+
+$('#homegrass').click(function(){
+    $('#homegrass').css({
+        "border":"2px solid rgb(20, 20, 19)"
     });
- 
-    $('#homegrass').click(function(){
-        $('#homegrass').css({
-            "border":"2px solid rgb(20, 20, 19)"
-        });
-        $('#awaygrass').css({
-            "border":"0px solid rgb(20, 20, 19)"
-        });
-        home = 1;
+    $('#awaygrass').css({
+        "border":"0px solid rgb(20, 20, 19)"
     });
-    $('#awaygrass').click(function(){
-        $('#awaygrass').css({
-            "border":"2px solid rgb(20, 20, 19)"
-        });
-        $('#homegrass').css({
-            "border":"0px solid rgb(20, 20, 19)"
-        });
-        home = 0;
+    $('.choose').css({
+        "display":"none"
     });
+    home = 1;
+});
+$('#awaygrass').click(function(){
+    $('#awaygrass').css({
+        "border":"2px solid rgb(20, 20, 19)"
+    });
+    $('#homegrass').css({
+        "border":"0px solid rgb(20, 20, 19)"
+    });
+    $('.choose').css({
+        "display":"none"
+    });
+    home = 0;
+});
+
+/* ***********************************   LABDABIRTOKLÁS   ************************************ */
 
 $('#homegrass').click(function(){
     if(Boolean(home) && Boolean (home_c))
@@ -127,61 +143,39 @@ $('#awaygrass').click(function(event){
     }
 });
 
+/* ***********************************   TERULETEK   ************************************ */
 
+$("div").click(function (e) {
+    switch ($(this).attr('id')) {
+        case "hsog": hsog++; $("#hsog").text(hsog); break;
+        case "asog": asog++; $("#asog").text(asog); break;
+        case "hsw1":
+        case "hsw2": hsw++; $("#hsw").text(hsw); break;
+        case "asw1":
+        case "asw2": asw++; $("#asw").text(asw); break;
+        case "homec1":
+        case "homec2": hc++; $("#hc").text(hc); break;
+        case "awayc1":
+        case "awayc2": ac++; $("#ac").text(ac); break;
+        case "homewhistle": hfc++; $("#hfc").text(hfc); break;
+        case "awaywhistle": afc++; $("#afc").text(afc); break;
 
-$('.home.sog').click(() => {
-    hsog++;
-    $("#hsog").text(hsog);
+    }
 })
-$('.away.sog').click(() => {
-    asog++;
-    $("#asog").text(asog);
-})
-$('.home.post').click(() => {
-    hsw++;
-    $("#hsw").text(hsw);
-})
-$('.away.post').click(() => {
-    asw++;
-    $("#asw").text(asw);
-})
-$('.home.corner').click(() => {
-    hc++;
-    $("#hc").text(hc);
-})
-$('.away.corner').click(() => {
-    ac++;
-    $("#ac").text(ac);
-})
-$('.homeyellow').click(() => {
-    hyc++;
-    $("#hyc").text(hyc);
-})
-$('.awayyellow').click(() => {
-    ayc++;
-    $("#ayc").text(ayc);
-})
-$('.homered').click(() => {
-    hrc++;
-    $("#hrc").text(hrc);
-})
-$('.awayred').click(() => {
-    arc++;
-    $("#arc").text(arc);
-})
-$('.home.whistle').click(() => {
-    hfc++;
-    $("#hfc").text(hfc);
-})
-$('.away.whistle').click(() => {
-    afc++;
-    $("#afc").text(afc);
-})
-$('.homegoal').click(() => {
-    hg++;
-    $("#hg").text(hg);
-})
-$('.awaygoal').click(() => {
-    ag++;
-    $("#ag").text(ag);
-})
+
+// $('.home.corner').click(() => {
+//     hc++;
+//     $("#hc").text(hc);
+// })
+// $('.away.corner').click(() => {
+//     ac++;
+//     $("#ac").text(ac);
+// })
+// $('.home.whistle').click(() => {
+//     hfc++;
+//     $("#hfc").text(hfc);
+// })
+// $('.away.whistle').click(() => {
+//     afc++;
+//     $("#afc").text(afc);
+// })
