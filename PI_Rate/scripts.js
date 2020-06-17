@@ -39,6 +39,10 @@ $("input").click(function (e) {
     }
 })
 
+// $(".valami").click(function (e) {
+//     $(this).data('source') = ($(this).attr('id')).(val)++;
+//     eval($(this).data('source')+"++;");
+// }
 /* ***********************************   TIMER   ************************************ */
 
 function getdate()
@@ -72,10 +76,10 @@ $('#start').click(function(){
 
 $('#homegrass').click(function(){
     $('#homegrass').css({
-        "border":"2px solid rgb(20, 20, 19)"
+        "border":"5px solid rgb(200, 20, 19)"
     });
     $('#awaygrass').css({
-        "border":"0px solid rgb(20, 20, 19)"
+        "border":"3px solid rgb(255, 255, 255)"
     });
     $('.choose').css({
         "display":"none"
@@ -84,10 +88,10 @@ $('#homegrass').click(function(){
 });
 $('#awaygrass').click(function(){
     $('#awaygrass').css({
-        "border":"2px solid rgb(20, 20, 19)"
+        "border":"5px solid rgb(200, 20, 19)"
     });
     $('#homegrass').css({
-        "border":"0px solid rgb(20, 20, 19)"
+        "border":"3px solid rgb(255, 255, 255)"
     });
     $('.choose').css({
         "display":"none"
@@ -163,19 +167,4 @@ $("div").click(function (e) {
     }
 })
 
-// $('.home.corner').click(() => {
-//     hc++;
-//     $("#hc").text(hc);
-// })
-// $('.away.corner').click(() => {
-//     ac++;
-//     $("#ac").text(ac);
-// })
-// $('.home.whistle').click(() => {
-//     hfc++;
-//     $("#hfc").text(hfc);
-// })
-// $('.away.whistle').click(() => {
-//     afc++;
-//     $("#afc").text(afc);
-// })
+var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024); 

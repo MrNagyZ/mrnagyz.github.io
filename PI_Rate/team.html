@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PI Rate statistics</title>
     <link rel="stylesheet" href="team_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="gombok">
         <input type="button" value="START" id="start">
-        <input type="button" value="HOME GOAL" id="homegoal">
+        <input type="button" value="HOME GOAL" data-source="hg" class="valami">
         <input type="button" value="HOME YELLOW CARD" id="homeyc">
         <input type="button" value="HOME RED CARD" id="homerc">
         <input type="button" value="AWAY GOAL" id="awaygoal">
@@ -17,12 +18,14 @@
         <input type="button" value="AWAY RED CARD" id="awayrc">
     </div>
     <div class="stat">
+        <div id="fejlec">HOME</div>
         <div id="time">00 : 00</div>
+        <div id="fejlec">AWAY</div>
       <table>
-        <tr>
+        <!-- <tr>
             <th colspan=7 class="kozep">HOME:<span id="hometeam"></span></th>
             <th colspan=7>AWAY:<span id="awayteam"></span></th>
-        </tr>
+        </tr> -->
         <tr>
             <th colspan=7 class="kozep">TIME: <span id="hometime"> 00 : 00</span></th>
             <th colspan=7>TIME: <span id="awaytime"> 00 : 00</span> </th>
@@ -73,6 +76,8 @@
     </div>
     <div class="field">
         <img src="img/all.jpg" id="field_img">
+        <div class="choose">HOME «-» AWAY</div>
+        <div class="choose">AWAY «-» HOME</div>
         <div class="choose">Choose a half!</div>
         <div class="home post top hsw" id="hsw1"></div>
         <div class="home post bottom hsw" id="hsw2"></div>
@@ -91,7 +96,7 @@
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="./jquery.js"></script>
     <script src="./scripts.js"></script>
 </body>
 </html>

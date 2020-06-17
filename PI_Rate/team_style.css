@@ -1,10 +1,15 @@
+html{
+
+}
+
 body{
-    max-width: 900px;
-    max-height: 600px;
+    max-width: 100vh;
+    max-height: 100vh;
     margin: auto;
     color: rgb(200, 200, 190);
     background-color: rgb(27, 27, 27);
     display: block;
+    font-family: 'Montserrat', sans-serif;
 }
 a{
     color: rgb(200, 200, 190);
@@ -17,7 +22,8 @@ a{
     width: 100%;
     height: 30px;
     display: flex;
-    align-items: center;
+    align-items: space-between;
+    //display: none;
 }
 input{
     margin-left: 10px;
@@ -26,7 +32,20 @@ input{
 /* ***********************************   EREDMÉNYEK   ************************************ */
 
 #time{
-    font-size: 30px;
+    font-size: 35px;
+    //margin-bottom: 5px;
+    border: 2px solid rgb(200, 200, 190);
+    padding: 0.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#fejlec{
+    font-size: 20px;
+    //margin-bottom: 5px;
+    border: 2px solid rgb(200, 200, 190);
+    padding: 0.5%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .stat{
     width: 100%;
@@ -54,7 +73,7 @@ table{
     width: 100%;
 }
 td{
-    width: auto;
+    width: 7.17%;
 }
 .kozep{
     border-right-width: 4px;
@@ -63,9 +82,9 @@ td{
 /* ***********************************   PÁLYA Általános   ************************************ */
 
 .field{
-    /* width: 100%;
-    height: 100%; */
-
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
     position: relative;
     text-align: center;
     display: flex;
@@ -85,9 +104,10 @@ td{
 /* ***********************************   KAPU MELLETT   ************************************ */
 
 .post {
-    width: 11%;
-    height: 23%;
-    background-color: rgb(167, 167, 167, 0.6);
+    width: 10%;
+    height: 22%;
+    background-color: rgb(167, 167, 167, 0.4);
+    border: 3px solid rgb(255, 255, 255);
 }
 .away.post{
     right: 0;
@@ -99,31 +119,32 @@ td{
 /* ***********************************   SZÖGLET   ************************************ */
 
 .corner{
-    background-color: rgb(167, 167, 167, 0.6);
+    background-color: rgb(167, 167, 167, 0.4);
     width: 10%;
     height: 10%;
     text-align: center;
     border-radius: 50%;
     padding-top: 0.8%;
     padding-bottom: 0.3%;
+    border: 3px solid rgb(255, 255, 255);
 }
 .home.corner{
-    left: 12%;
+    left: 11.8%;
     border-top-left-radius: 0%;
     border-bottom-left-radius: 0%;
     }
 .away.corner{
-    right: 12%;
+    right: 11.6%;
     border-top-right-radius: 0%;
     border-bottom-right-radius: 0%;
 }
 .top.corner{
-    top: 5%;
+    top: 4.6%;
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
 }
 .bottom.corner{
-    bottom: 5%;
+    bottom: 4.6%;
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
 }
@@ -136,7 +157,7 @@ td{
 
 .grass{
     display: flex;
-    background-color: rgb(167, 167, 167, 0.6);
+    background-color: rgb(167, 167, 167, 0.4);
     width: 25%;
     height: 35%;
     top: 45%;
@@ -144,23 +165,25 @@ td{
     border-radius: 40%;
     align-items: center;
     justify-content: center;
+    
 }
 .away.grass{
     left: 55%;
 }
 .filed_kep{
-    width: 40%;
+    width: 38%;
     height: 50%;
 }
 
 /* ***********************************   KAPU   ************************************ */
 
 .sog{
-    background-color: rgb(167, 167, 167, 0.6);
+    background-color: rgb(167, 167, 167, 0.4);
     width: 8%;
     height: 40%;
     top: 30%;
     left: 3%;
+    border: 3px solid rgb(255, 255, 255);
 }
 .away.sog{
     left: 89%;
@@ -169,13 +192,14 @@ td{
 /* ***********************************   SÍP   ************************************ */
 
 .whistle{
-    background-color: rgb(167, 167, 167, 0.6);
+    background-color: rgb(167, 167, 167, 0.5);
     width: 9%;
     height: 15%;
     top: 15%;
     left: 35%;
     border-radius: 20%;
     z-index: 5;
+    border: 3px solid rgb(255, 255, 255);
 }
 .whistle_kep{
     width: 80%;
