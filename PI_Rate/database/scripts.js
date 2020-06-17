@@ -12,7 +12,7 @@ var deleteStatement = "DELETE FROM Contacts WHERE id=?";
  
 var dropStatement = "DROP TABLE Contacts";
  
- var db = openDatabase("AddressBook", "1.0", "Address Book", 200000);  // Open SQLite Database
+ var db = openDatabase("AddressBook_test", "1.0", "Address Book", 200000);  // Open SQLite Database
  
 var dataset;
  

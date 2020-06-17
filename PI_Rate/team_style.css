@@ -1,15 +1,16 @@
 html{
-
+    height: 100%;
 }
 
 body{
-    max-width: 100vh;
+    max-width: 1000px;
     max-height: 100vh;
     margin: auto;
     color: rgb(200, 200, 190);
     background-color: rgb(27, 27, 27);
     display: block;
     font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
 }
 a{
     color: rgb(200, 200, 190);
@@ -23,7 +24,7 @@ a{
     height: 30px;
     display: flex;
     align-items: space-between;
-    //display: none;
+    /* display: none; */
 }
 input{
     margin-left: 10px;
@@ -33,7 +34,6 @@ input{
 
 #time{
     font-size: 35px;
-    //margin-bottom: 5px;
     border: 2px solid rgb(200, 200, 190);
     padding: 0.5%;
     padding-left: 5%;
@@ -41,7 +41,7 @@ input{
 }
 #fejlec{
     font-size: 20px;
-    //margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     border: 2px solid rgb(200, 200, 190);
     padding: 0.5%;
     padding-left: 5%;
@@ -66,8 +66,8 @@ table, td, th{
     border-collapse: collapse;
 }
 td, th {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 0.6%;
+    padding-bottom: 0.6%;
 }
 table{
     width: 100%;
@@ -84,7 +84,7 @@ td{
 .field{
     width: 100%;
     height: 100%;
-    margin-top: 10px;
+    margin-top: 1%;
     position: relative;
     text-align: center;
     display: flex;
@@ -181,7 +181,7 @@ td{
     background-color: rgb(167, 167, 167, 0.4);
     width: 8%;
     height: 40%;
-    top: 30%;
+    top: 29.7%;
     left: 3%;
     border: 3px solid rgb(255, 255, 255);
 }

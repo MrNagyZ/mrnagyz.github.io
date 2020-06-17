@@ -28,21 +28,13 @@ let awaypercent = 0;
 
 /* ***********************************   GOMBOK   ************************************ */
  
-$("input").click(function (e) {
-    switch ($(this).attr('id')) {
-        case "homegoal": hg++; $("#hg").text(hg); break;
-        case "awaygoal": ag++; $("#ag").text(ag); break;
-        case "homeyc": hyc++; $("#hyc").text(hyc); break;
-        case "awayyc": ayc++; $("#ayc").text(ayc); break;
-        case "homerc": hrc++; $("#hrc").text(hrc); break;
-        case "awayrc": arc++; $("#arc").text(arc); break;
-    }
-})
+ $(".gomb").click(function (e) {
+     if (main_full_time != 0) {
+        eval($(this).data('source')+"++");
+        $('#'+$(this).data('source')).text(eval($(this).data('source')));
+     }
+ });
 
-// $(".valami").click(function (e) {
-//     $(this).data('source') = ($(this).attr('id')).(val)++;
-//     eval($(this).data('source')+"++;");
-// }
 /* ***********************************   TIMER   ************************************ */
 
 function getdate()
