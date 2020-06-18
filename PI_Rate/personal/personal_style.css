@@ -1,0 +1,521 @@
+html{
+    /* height: 100%; */
+}
+
+body{
+    max-width: 97%;
+    max-height: 100vh;
+    margin: auto;
+    color: rgb(200, 200, 190);
+    background-color: rgb(27, 27, 27);
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+a{
+    color: rgb(200, 200, 190);
+    text-decoration: none;
+}
+
+button, .homeStats, .awayStats, .gomb.grass{
+    cursor: pointer;
+}
+
+/* ***********************************   TOP   ************************************ */
+
+.gombok{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: space-between;
+    margin-left: 10px;
+    margin-top: 5px;
+    display: none;
+}
+.gombTop{
+    -webkit-appearance: none;
+    /* width: 6%; */
+    height: 60%;
+    /* box-shadow: 2px 3px 5px 0px rgb(65, 64, 64); */
+	background-color:rgb(49, 49, 49);
+	border-radius: 10%;
+	border:1px solid rgb(196, 195, 195);
+	cursor:pointer;
+	color:#ffffff;
+	text-decoration:none;
+    text-shadow:1px 1px 0px #000000;
+    font-size: 9px;
+    margin-right: 10px;
+    
+}
+
+
+/* ***********************************   EREDMÉNYEK   ************************************ */
+
+#time{
+    font-size: 15px;
+    background-color: rgb(85, 85, 85);
+    /* border: 2px solid rgb(200, 200, 190);
+    border-bottom: 1px solid rgb(200, 200, 190); */
+    /* padding: 0.5%;
+    padding-left: 5%;
+    padding-right: 5%; */
+}
+#fejlec{
+    font-size: 20px;
+    /* margin-bottom: 5px; */
+    border: 2px solid rgb(200, 200, 190);
+    padding: 0.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.stat{
+    width: 100%;
+    /* height: 130px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;  
+}
+table{
+    display: block;
+    overflow-x: auto;
+    /* white-space: nowrap; */
+}
+table, td, th{
+    text-align: center;
+    
+    border-collapse: collapse;
+}
+td, th {
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    border: 1px solid rgb(200, 200, 190);
+}
+table{
+    width: 100%;
+}
+td{
+    width: 7.17%;
+}
+
+
+/* ***********************************   PÁLYA Általános   ************************************ */
+
+.main{
+    width: 100%;
+    height: 100%;
+    margin-top: 0.5%;
+    position: relative;
+    text-align: center;
+    display: flex;
+}
+
+#field_img{
+    width: 100%;
+    height: auto;
+    /* margin: auto; */
+}
+
+/* .field_kep{
+    flex-grow: 6;
+} */
+
+/* .home, .away{
+    position: absolute;
+    cursor: pointer;
+} */
+
+/* ***********************************   KAPU MELLETT   ************************************ */
+
+.post {
+    width: 10%;
+    height: 22%;
+    background-color: rgb(167, 167, 167, 0.4);
+    border: 3px solid rgb(255, 255, 255);
+}
+.away.post{
+    right: 0;
+}
+.bottom.post{
+    bottom: 0;
+}
+
+/* ***********************************   SZÖGLET   ************************************ */
+
+.corner{
+    background-color: rgb(167, 167, 167, 0.4);
+    width: 10%;
+    height: 10%;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 0.8%;
+    padding-bottom: 0.3%;
+    border: 3px solid rgb(255, 255, 255);
+}
+.home.corner{
+    left: 11.7%;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    }
+.away.corner{
+    right: 11.6%;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+.top.corner{
+    top: 4.6%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+}
+.bottom.corner{
+    bottom: 4.6%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+.corner_kep{
+    width: 60%;
+    height: 80%;
+}
+
+/* ***********************************   PÁLYA   ************************************ */
+
+.grass{
+    display: flex;
+    background-color: rgb(12, 184, 184);
+    width: 40%;
+    height: 100%;
+    /* top: 45%; */
+    /* left: 20%; */
+    border-radius: 40%;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    /* position: absolute; */
+}
+ .away.grass{
+    background-color: rgb(184, 75, 12);
+}
+.filed_kep{
+    width: 60%;
+    height: 60%;
+    
+}
+
+/* ***********************************   KAPU   ************************************ */
+
+.sog{
+    background-color: rgb(167, 167, 167, 0.4);
+    width: 8%;
+    height: 40%;
+    top: 29.7%;
+    left: 3%;
+    border: 3px solid rgb(255, 255, 255);
+}
+.away.sog{
+    left: 89%;
+}
+
+/* ***********************************   SÍP   ************************************ */
+
+.whistle{
+    background-color: rgb(167, 167, 167, 0.5);
+    width: 9%;
+    height: 15%;
+    top: 15%;
+    left: 35%;
+    border-radius: 20%;
+    z-index: 5;
+    border: 3px solid rgb(255, 255, 255);
+}
+.whistle_kep{
+    width: 80%;
+    height: 80%;
+}
+.away.whistle{
+    left: 56%;
+}
+
+/* ***********************************   CHOOSE   ************************************ */
+
+.choose{
+    position: absolute;
+    display: flex;
+    background-color: rgb(27, 27, 27);
+    width: 40%;
+    height: 20%;
+    left: 29%;
+    top: 18%;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border: 10px solid red;
+    z-index: 10;
+}
+
+/* ***********************************   TABLAZAT   ************************************ */
+
+.tablazat{
+    display: block;
+    width: 80%;
+
+    background-color: rgb(95, 95, 95);
+}
+
+.csapat{
+    flex-grow: 9;
+    /* background-color: royalblue; */
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bal{
+    height: 100%;
+}
+
+.jatekos{
+    -webkit-appearance: none;
+    width: 6%;
+    height: 70%;
+    box-shadow: 2px 3px 5px 0px rgb(65, 64, 64);
+	background-color:rgb(167, 167, 167);
+	border-radius: 30%;
+	border:1px solid rgb(196, 195, 195);
+	cursor:pointer;
+	color:#ffffff;
+	text-decoration:none;
+    text-shadow:1px 1px 0px #000000;
+    font-size: 12px;
+}
+
+.team_name{
+    display: inline-flex;
+    height: 30px;
+    flex-grow: 1;
+    max-width: 10%;
+    border-right: 2px solid rgb(167, 167, 167);
+    align-items: center;
+    justify-content: center;
+    /* background-color: green; */
+}
+
+.mission{
+    height: 80px;
+    /* background-color: green; */
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid rgb(167, 167, 167);
+    border-top: 0px;
+    border-right: 0px;
+}
+
+.top{
+    /* height: 30%; */
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-flex;
+    border: 2px solid rgb(167, 167, 167);
+    border-right: 0px;
+}
+
+.bottomButton{
+    display: flex;
+    height: 70%;
+    width: 13%;
+    background-color: grey;
+    margin-left: 3%;
+    box-shadow: 2px 3px 5px 0px rgb(65, 64, 64);
+	background-color:rgb(167, 167, 167);
+	border-radius: 30%;
+	border:1px solid rgb(196, 195, 195);
+	cursor:pointer;
+	color:#ffffff;
+	text-decoration:none;
+    text-shadow:1px 1px 0px #000000;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+
+}
+.overlay {
+    position: absolute;
+    top: -130%;
+    left: 3%;
+    right: 0;
+    background-color: rgb(27, 27, 27);
+    border: 1px solid rgb(136, 136, 136);
+    box-shadow: 0px 0px 5px 5px rgb(27, 27, 27);
+    display: none;
+    width: 20%;
+    height: 180%;
+  }
+
+.text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.al{
+    width: 36%;
+    margin: 8.5% 5%;
+    height: 30px;
+}
+.ballpos{
+    margin-left: 5%;
+    display: flex;
+    width: 35%;
+    height: 90%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.teamStats{
+    box-sizing: border-box;
+    height: 10%;
+    width: 100%;
+    border: 2px solid rgb(200, 200, 190);
+    border-bottom: 0px;
+}
+.homeStats{
+    box-sizing: border-box;
+    height: 50%;
+    width: 100%;
+    border: 2px solid rgb(200, 200, 190);
+    border-bottom: 0px;
+    transition: 1s;
+}
+.awayStats{
+    box-sizing: border-box;
+    height: 50%;
+    width: 100%;
+    border: 2px solid rgb(200, 200, 190);
+    transition: 1s;
+}
+.homeStats:hover+.awayStats { height: 20%; }
+.homeStats:hover { height: 80%; }
+.awayStats:hover+.homeStats { 
+    height: 10%;
+ }
+/* .awayStats:hover { height: 80%; } */
+
+.middle{
+    position: relative;
+}
+.kozep{
+    position: absolute;
+    display: flex;
+    height: 11%;
+    width: 7%;
+    margin-left: 3%;
+    box-shadow: 2px 3px 5px 0px rgb(65, 64, 64);
+	border-radius: 50%;
+	border:1px solid rgb(196, 195, 195);
+	cursor:pointer;
+	color:#ffffff;
+	text-decoration:none;
+    text-shadow:1px 1px 0px #000000;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+.kozep.home{
+    background-color:rgb(12, 184, 184);
+}
+.kozep.away{
+    background-color:rgb(184, 75, 12);
+}
+.k1{
+    top: 45%;
+    left: 2%;
+}
+.k2{
+    top: 23%;
+    left: 16.5%;
+}
+.k3{
+    top: 45%;
+    left: 12%;
+}
+.k4{
+    bottom: 23%;
+    left: 16.5%;
+}
+.k5{
+    top: 9%;
+    left: 27%;
+}
+.k6{
+    top: 34%;
+    left: 27%;
+}
+.k7{
+    bottom: 34%;
+    left: 27%;
+}
+.k8{
+    bottom: 12%;
+    left: 27%;
+}
+.k9{
+    top: 23%;
+    left: 38%;
+}
+.k10{
+    top: 45%;
+    left: 38%;
+}
+.k11{
+    bottom: 23%;
+    left: 38%;
+}
+.k22{
+    bottom: 23%;
+    right: 41%;
+}
+.k21{
+    top: 45%;
+    right: 41%;
+}
+.k20{
+    top: 23%;
+    right: 41%;
+}
+.k16{
+    top: 9%;
+    right: 30%;
+}
+.k18{
+    top: 34%;
+    right: 30%;
+}
+.k17{
+    bottom: 34%;
+    right: 30%;
+}
+.k19{
+    bottom: 12%;
+    right: 30%;
+}
+.k15{
+    bottom: 23%;
+    right: 19.5%;
+}
+.k13{
+    top: 23%;
+    right: 19.5%;
+}
+.k14{
+    top: 45%;
+    right: 15%;
+}
+.k12{
+    top: 45%;
+    right: 5%;
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PI Rate statistics</title>
+    <link rel="stylesheet" href="personal_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="gombok">
+        <input type="button" value="START" class="gombTop" id="start">
+        <input type="button" value="HOME GOAL" data-source="hg" class="gombTop">
+        <input type="button" value="HOME YELLOW CARD" data-source="hyc" class="gombTop">
+        <input type="button" value="HOME RED CARD" data-source="hrc" class="gombTop">
+        <input type="button" value="AWAY GOAL" data-source="ag" class="gombTop">
+        <input type="button" value="AWAY YELLOW CARD" data-source="ayc" class="gombTop">
+        <input type="button" value="AWAY RED CARD" data-source="arc" class="gombTop">
+    </div>
+    <div class="stat">
+        <!-- <div id="fejlec">HOME</div>
+        <div id="time">00 : 00</div>
+        <div id="fejlec">AWAY</div> -->
+      <table>
+        <!-- <tr>
+            <th colspan=7 class="kozep" data-source="htn">HOME TEAM NAME</th>
+            <th colspan=7 data-source="atn">AWAY TEAM NAME</th>
+        </tr>
+        <tr>
+            <th colspan=7 class="kozep">TIME: <span id="hometime"> 00 : 00</span></th>
+            <th colspan=7>TIME: <span id="awaytime"> 00 : 00</span> </th>
+        </tr>
+        <tr>
+            <th colspan=7 class="kozep">RATE: <span id="homepercent"> 0,00%</span></th>
+            <th colspan=7>RATE: <span id="awaypercent"> 0,00%</span></th>
+        </tr> -->
+        <tr>
+            <td id="time">00 : 00</td>
+            <td>Ball pos</td>
+            <td>Goal</td>
+            <td>Shots on goal</td>
+            <td>Shots wide</td>
+            <td>Fauls commited</td>
+            <td>Yellow cards</td>
+            <td>Red cards</td>
+            <td>Corners</td>
+        </tr>
+        <tr>
+            <!-- <td>Goal</td>
+            <td>Shots on goal</td>
+            <td>Shots wide</td>
+            <td>Fauls commited</td>
+            <td>Yellow cards</td>
+            <td>Red cards</td>
+            <td class="kozepTabla">Corners</td>
+            <td>Goal</td>
+            <td>Shots on goal</td>
+            <td>Shots wide</td>
+            <td>Fauls commited</td>
+            <td>Yellow cards</td>
+            <td>Red cards</td>
+            <td>Corners</td> -->
+            <td>HOME</td>
+            <td><span id="homepercent"> 0,00%</span></td>
+            <td id="hg">0</td>
+            <td id="hsog">0</td>
+            <td id="hsw">0</td>
+            <td id="hfc">0</td>
+            <td id="hyc">0</td>
+            <td id="hrc">0</td>
+            <td id="hc">0</td>
+            
+        </tr>
+        <tr>
+            <!-- <td id="hg">0</td>
+            <td id="hsog">0</td>
+            <td id="hsw">0</td>
+            <td id="hfc">0</td>
+            <td id="hyc">0</td>
+            <td id="hrc">0</td>
+            <td id="hc" class="kozepTabla">0</td>
+            <td id="ag">0</td>
+            <td id="asog">0</td>
+            <td id="asw">0</td>
+            <td id="afc">0</td>
+            <td id="ayc">0</td>
+            <td id="arc">0</td>
+            <td id="ac">0</td> -->
+            <td>AWAY</td>
+            <td><span id="awaypercent"> 0,00%</span></td>
+            <td id="ag">0</td>
+            <td id="asog">0</td>
+            <td id="asw">0</td>
+            <td id="afc">0</td>
+            <td id="ayc">0</td>
+            <td id="arc">0</td>
+            <td id="ac">0</td>
+        </tr>
+        
+    </table>
+    </div>
+    <div class="main">
+        <div class="bal">
+            <div class="top">
+                <div class="team_name">NÉV</div>
+                <div class="csapat">
+                    <input type="button"  class="home jatekos" value="1">
+                    <input type="button"  class="home jatekos" value="2">
+                    <input type="button"  class="home jatekos" value="3">
+                    <input type="button"  class="home jatekos" value="4">
+                    <input type="button"  class="home jatekos" value="5">
+                    <input type="button"  class="home jatekos" value="6">
+                    <input type="button"  class="home jatekos" value="7">
+                    <input type="button"  class="home jatekos" value="8">
+                    <input type="button"  class="home jatekos" value="9">
+                    <input type="button"  class="home jatekos" value="10">
+                    <input type="button"  class="home jatekos" value="11">
+                </div>
+            </div>
+            <div class="middle">
+                
+                <img src="../img/soccer-field.jpg" id="field_img">
+                <input type="button"  class="home kozep k1" value="1">
+                <input type="button"  class="home kozep k2" value="2">
+                <input type="button"  class="home kozep k3" value="3">
+                <input type="button"  class="home kozep k4" value="4">
+                <input type="button"  class="home kozep k5" value="5">
+                <input type="button"  class="home kozep k6" value="6">
+                <input type="button"  class="home kozep k7" value="7">
+                <input type="button"  class="home kozep k8" value="8">
+                <input type="button"  class="home kozep k9" value="9">
+                <input type="button"  class="home kozep k10" value="10">
+                <input type="button"  class="home kozep k11" value="11">
+                <input type="button"  class="away kozep k12" value="1">
+                <input type="button"  class="away kozep k13" value="2">
+                <input type="button"  class="away kozep k14" value="3">
+                <input type="button"  class="away kozep k15" value="4">
+                <input type="button"  class="away kozep k16" value="5">
+                <input type="button"  class="away kozep k17" value="6">
+                <input type="button"  class="away kozep k18" value="7">
+                <input type="button"  class="away kozep k19" value="8">
+                <input type="button"  class="away kozep k20" value="9">
+                <input type="button"  class="away kozep k21" value="10">
+                <input type="button"  class="away kozep k22" value="11">
+            </div>
+            <div class="top">
+                <div class="team_name">NÉV</div>
+                <div class="csapat">
+                    <input type="button"  class="away jatekos" value="1">
+                    <input type="button"  class="away jatekos" value="2">
+                    <input type="button"  class="away jatekos" value="3">
+                    <input type="button"  class="away jatekos" value="4">
+                    <input type="button"  class="away jatekos" value="5">
+                    <input type="button"  class="away jatekos" value="6">
+                    <input type="button"  class="away jatekos" value="7">
+                    <input type="button"  class="away jatekos" value="8">
+                    <input type="button"  class="away jatekos" value="9">
+                    <input type="button"  class="away jatekos" value="10">
+                    <input type="button"  class="away jatekos" value="11">
+                </div>
+            </div>
+            <div class="mission">
+                <div class="bottomButton shot">SHOT</div>
+                <div class="overlay">
+                    <div class="text">
+                        <input type="button"  class="al shot bottomButton" value="Wide">
+                        <input type="button"  class="al shot bottomButton" value="High">
+                        <input type="button"  class="al shot bottomButton" value="Past">
+                        <input type="button"  class="al shot bottomButton" value="Cross">
+                        <input type="button"  class="al shot bottomButton" value="Block">
+                        <input type="button"  class="al shot bottomButton" value="Save">
+                    </div>
+                </div>
+                <div class="bottomButton cornerKick">CORNER</div>
+                <div class="bottomButton penaltyKick">PENALTY <br> KICK</div>
+                <div class="bottomButton offside">OFFSIDE</div>
+                <div class="ballpos">
+                    <div class="gomb home grass" id="homegrass">
+                        <img src="../img/score.png" class="filed_kep">
+                    </div>
+                    <div class="gomb away grass" id="awaygrass">
+                        <img src="../img/score.png" class="filed_kep">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tablazat">
+            <!-- <div class="teamStats"></div> -->
+            <div class="homeStats"></div>
+            <div class="awayStats"></div>
+        </div>
+        <!-- <div class="gomb choose">HOME «-» AWAY</div>
+        <div class="choose">AWAY «-» HOME</div>
+        <div class="choose">Choose a half!</div> -->
+    </div>
+ 
+
+    <script src="../jquery.js"></script>
+    <script src="personal_scripts.js"></script>
+</body>
+</html>

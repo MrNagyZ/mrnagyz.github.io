@@ -29,11 +29,11 @@ let awaypercent = 0;
 /* ***********************************   GOMBOK   ************************************ */
  
  $(".gomb").click(function (e) {
-     if (main_full_time != 0) {
+    //  if (main_full_time != 0) {
         //  alert(eval($(this).data('source')));
         eval($(this).data('source')+"++");
         $('#'+$(this).data('source')).text(eval($(this).data('source')));
-     }
+    //  }
  });
 
 /* ***********************************   TIMER   ************************************ */
@@ -142,21 +142,11 @@ $('#awaygrass').click(function(event){
 
 // /* ***********************************   TERULETEK   ************************************ */
 
-// $("div").click(function (e) {
-//     switch ($(this).attr('id')) {
-//         case "hsog": hsog++; $("#hsog").text(hsog); break;
-//         case "asog": asog++; $("#asog").text(asog); break;
-//         case "hsw1":
-//         case "hsw2": hsw++; $("#hsw").text(hsw); break;
-//         case "asw1":
-//         case "asw2": asw++; $("#asw").text(asw); break;
-//         case "homec1":
-//         case "homec2": hc++; $("#hc").text(hc); break;
-//         case "awayc1":
-//         case "awayc2": ac++; $("#ac").text(ac); break;
-//         case "homewhistle": hfc++; $("#hfc").text(hfc); break;
-//         case "awaywhistle": afc++; $("#afc").text(afc); break;
+$(".shot").click(function () {
+    $(".overlay").fadeIn(100);
+});
 
-//     }
-// })
+$(".shot.al").click(function () {
+    $(".overlay").fadeOut(100);
+});
  

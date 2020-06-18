@@ -23,8 +23,8 @@
         <div id="fejlec">AWAY</div>
       <table>
         <tr>
-            <th colspan=7 class="kozep">HOME TEAM NAME<span id="hometeam"></span></th>
-            <th colspan=7>AWAY TEAM NAME<span id="awayteam"></span></th>
+            <th colspan=7 class="kozep" data-source="htn">HOME TEAM NAME</th>
+            <th colspan=7 data-source="atn">AWAY TEAM NAME</th>
         </tr>
         <tr>
             <th colspan=7 class="kozep">TIME: <span id="hometime"> 00 : 00</span></th>
@@ -75,28 +75,28 @@
     <img src="img/red_card.jpg" class="awayred card"> -->
     </div>
     <div class="field">
-        <img src="img/all.jpg" id="field_img">
-        <div class="choose">HOME «-» AWAY</div>
+        <img src="../img/all.jpg" id="field_img">
+        <div class="gomb choose">HOME «-» AWAY</div>
         <div class="choose">AWAY «-» HOME</div>
         <div class="choose">Choose a half!</div>
-        <div class="home post top hsw" id="hsw1"></div>
-        <div class="home post bottom hsw" id="hsw2"></div>
-        <div class="away post top asw" id="asw1"></div>
-        <div class="away post bottom asw" id="asw2"></div>
-        <div class="home grass" id="homegrass"><img src="img/score.png" class="filed_kep"></div>
-        <div class="away grass" id="awaygrass"><img src="img/score.png" class="filed_kep"></div>
-        <div class="home whistle" id="homewhistle"><img src="img/whistle.png" class="whistle_kep"></div>
-        <div class="away whistle" id="awaywhistle"><img src="img/whistle.png" class="whistle_kep"></div>
-        <div class="home corner top" id="homec1"><img src="img/corner.png" class="corner_kep"></div>
-        <div class="away corner top" id="awayc1"><img src="img/corner.png" class="corner_kep"></div>
-        <div class="home corner bottom" id="homec2"><img src="img/corner.png" class="corner_kep"></div>
-        <div class="away corner bottom" id="awayc2"><img src="img/corner.png" class="corner_kep"></div>
-        <div class="home sog" id="hsog"></div>
-        <div class="away sog" id="asog"></div>
+        <div class="gomb home post top hsw" data-source="hsw"></div>
+        <div class="gomb home post bottom hsw" data-source="hsw"></div>
+        <div class="gomb away post top asw" data-source="asw"></div>
+        <div class="gomb away post bottom asw" data-source="asw"></div>
+        <div class="gomb home grass" id="homegrass"><img src="../img/score.png" class="filed_kep"></div>
+        <div class="gomb away grass" id="awaygrass"><img src="../img/score.png" class="filed_kep"></div>
+        <div class="gomb home whistle" data-source="hfc"><img src="../img/whistle.png" class="whistle_kep"></div>
+        <div class="gomb away whistle" data-source="afc"><img src="../img/whistle.png" class="whistle_kep"></div>
+        <div class="gomb home corner top" data-source="hc"><img src="../img/corner.png" class="corner_kep"></div>
+        <div class="gomb away corner top" data-source="ac"><img src="../img/corner.png" class="corner_kep"></div>
+        <div class="gomb home corner bottom" data-source="hc"><img src="../img/corner.png" class="corner_kep"></div>
+        <div class="gomb away corner bottom" data-source="ac"><img src="../img/corner.png" class="corner_kep"></div>
+        <div class="gomb home sog" data-source="hsog"></div>
+        <div class="gomb away sog" data-source="asog"></div>
     </div>
 
 
-    <script src="./jquery.js"></script>
-    <script src="./scripts.js"></script>
+    <script src="../jquery.js"></script>
+    <script src="../scripts.js"></script>
 </body>
 </html>
