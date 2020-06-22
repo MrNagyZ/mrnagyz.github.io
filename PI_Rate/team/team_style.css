@@ -82,8 +82,6 @@ table{
     table-layout: fixed;
     width: 100%;
     white-space: nowrap;
-    background-color: violet;
-  
 }
 table, td{
     text-align: center;

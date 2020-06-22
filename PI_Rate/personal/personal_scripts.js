@@ -55,11 +55,14 @@ function getdate()
  
 $('#start').click(function(){
     if (main_start_time == 0){
-        main_start_time = new Date();
-        if (Boolean(home)) {
+        
+        if (!Boolean(home_c)) {
+            main_start_time = new Date();
             temp_home_time = main_start_time;
         } else {
+            main_start_time = new Date();
             temp_away_time = main_start_time;
+            //alert("away");
         }
         getdate();
     }
@@ -92,6 +95,20 @@ $('#start').click(function(){
 //     home = 0;
 // });
 
+$('#awaygrass').click(function(){
+    if(main_start_time == 0){
+        if(!Boolean(home_c)){
+            $(".grass").css('background-color', 'rgb(184, 75, 12)'); //piros
+            home_c = 1;
+        }
+        else
+        {
+            $(".grass").css('background-color', 'rgb(12, 184, 184)'); //kek
+            home_c = 0;
+        }
+    }
+ });
+ 
 /* ***********************************   LABDABIRTOKLÁS   ************************************ */
 
 // $('#homegrass').click(function(){
@@ -211,3 +228,5 @@ $(".blur").css("filter","blur(3px)");
  $(".choose").fadeIn(100);
 
    });
+
+   $(".draggable").draggable();

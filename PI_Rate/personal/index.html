@@ -36,7 +36,8 @@
         </tr> -->
         <tr>
             <th id="time">00 : 00</th>
-            <th>Ball pos</th>
+            <th>Pos time</th>
+            <th>Pos rate</th>
             <th>Goal</th>
             <th>Shots on goal</th>
             <th>Shots wide</th>
@@ -61,6 +62,7 @@
             <td>Red cards</td>
             <td>Corners</td> -->
             <td class="homeText">HOME</td>
+            <td><span id="hometime"> 00 : 00</span></td>
             <td><span id="homepercent"> 0,00%</span></td>
             <td id="hg">0</td>
             <td id="hsog">0</td>
@@ -87,6 +89,7 @@
             <td id="arc">0</td>
             <td id="ac">0</td> -->
             <td class="awayText">AWAY</td>
+            <td><span id="awaytime"> 00 : 00</span></td>
             <td><span id="awaypercent"> 0,00%</span></td>
             <td id="ag">0</td>
             <td id="asog">0</td>
@@ -120,7 +123,7 @@
             <div class="middle">
                 <div class="choose window" id="choose">Do not forget to setup who start the mach! <br><br>The default is HOME</div>
                 <img src="../img/soccer-field.jpg" id="field_img" class="blur">
-                <input type="button"  class="home kozep h1 blur" value="1" data-source="h1">
+                <input type="button"  class="home kozep h1 blur draggable" value="1" data-source="h1">
                 <input type="button"  class="home kozep h2 blur" value="2" data-source="h2">
                 <input type="button"  class="home kozep h3 blur" value="3" data-source="h3">
                 <input type="button"  class="home kozep h4 blur" value="4" data-source="h4">
