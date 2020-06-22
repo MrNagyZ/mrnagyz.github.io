@@ -9,64 +9,64 @@
 </head>
 <body>
     <div class="gombok">
-        <input type="button" value="START" id="start">
-        <input type="button" value="HOME GOAL" data-source="hg" class="gomb">
-        <input type="button" value="HOME YELLOW CARD" data-source="hyc" class="gomb">
-        <input type="button" value="HOME RED CARD" data-source="hrc" class="gomb">
-        <input type="button" value="AWAY GOAL" data-source="ag" class="gomb">
-        <input type="button" value="AWAY YELLOW CARD" data-source="ayc" class="gomb">
-        <input type="button" value="AWAY RED CARD" data-source="arc" class="gomb">
+        <input type="button" value="START" id="start" class="gombTop">
+        <input type="button" value="HOME GOAL" data-source="hg" class="gomb gombTop">
+        <input type="button" value="HOME YELLOW CARD" data-source="hyc" class="gomb gombTop">
+        <input type="button" value="HOME RED CARD" data-source="hrc" class="gomb gombTop">
+        <input type="button" value="AWAY GOAL" data-source="ag" class="gomb gombTop">
+        <input type="button" value="AWAY YELLOW CARD" data-source="ayc" class="gomb gombTop">
+        <input type="button" value="AWAY RED CARD" data-source="arc" class="gomb gombTop">
     </div>
     <div class="stat">
-        <div id="fejlec">HOME</div>
-        <div id="time">00 : 00</div>
-        <div id="fejlec">AWAY</div>
-      <table>
-        <tr>
-            <th colspan=7 class="kozep" data-source="htn">HOME TEAM NAME</th>
-            <th colspan=7 data-source="atn">AWAY TEAM NAME</th>
-        </tr>
-        <tr>
-            <th colspan=7 class="kozep">TIME: <span id="hometime"> 00 : 00</span></th>
-            <th colspan=7>TIME: <span id="awaytime"> 00 : 00</span> </th>
-        </tr>
-        <tr>
-            <th colspan=7 class="kozep">RATE: <span id="homepercent"> 0,00%</span></th>
-            <th colspan=7>RATE: <span id="awaypercent"> 0,00%</span></th>
-        </tr>
-        <tr>
-            <td>Goal</td>
-            <td>Shots on goal</td>
-            <td>Shots wide</td>
-            <td>Fauls commited</td>
-            <td>Yellow cards</td>
-            <td>Red cards</td>
-            <td class="kozep">Corners</td>
-            <td>Goal</td>
-            <td>Shots on goal</td>
-            <td>Shots wide</td>
-            <td>Fauls commited</td>
-            <td>Yellow cards</td>
-            <td>Red cards</td>
-            <td>Corners</td>
-        </tr>
-        <tr>
-            <td id="hg">0</td>
-            <td id="hsog">0</td>
-            <td id="hsw">0</td>
-            <td id="hfc">0</td>
-            <td id="hyc">0</td>
-            <td id="hrc">0</td>
-            <td id="hc" class="kozep">0</td>
-            <td id="ag">0</td>
-            <td id="asog">0</td>
-            <td id="asw">0</td>
-            <td id="afc">0</td>
-            <td id="ayc">0</td>
-            <td id="arc">0</td>
-            <td id="ac">0</td>
-        </tr>
-    </table>
+        <table>
+            <tr>
+                <td id="fejlec" class="homeText">HOME <br><span data-source="htn">HOME TEAM NAME</span></td>
+                <td id="time">00 : 00</td>
+                <td id="fejlec" class="awayText">AWAY <br><span data-source="atn">AWAY TEAM NAME</span></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td class="kozep th">TIME: <span id="hometime"> 00 : 00</span></td>
+                <td class="kozep th">POS: <span id="homepercent"> 0,00%</span></td>
+                <td class="th"> TIME: <span id="awaytime"> 00 : 00</span> </td>
+                <td class="th">POS: <span id="awaypercent"> 0,00%</span></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>Goal</td>
+                <td>Shots on goal</td>
+                <td>Shots wide</td>
+                <td>Fauls commited</td>
+                <td>Yellow cards</td>
+                <td>Red cards</td>
+                <td class="kozep">Corners</td>
+                <td>Goal</td>
+                <td>Shots on goal</td>
+                <td>Shots wide</td>
+                <td>Fauls commited</td>
+                <td>Yellow cards</td>
+                <td>Red cards</td>
+                <td>Corners</td>
+            </tr>
+            <tr>
+                <td id="hg">0</td>
+                <td id="hsog">0</td>
+                <td id="hsw">0</td>
+                <td id="hfc">0</td>
+                <td id="hyc">0</td>
+                <td id="hrc">0</td>
+                <td id="hc" class="kozep">0</td>
+                <td id="ag">0</td>
+                <td id="asog">0</td>
+                <td id="asw">0</td>
+                <td id="afc">0</td>
+                <td id="ayc">0</td>
+                <td id="arc">0</td>
+                <td id="ac">0</td>
+            </tr>
+        </table>
     <!-- <img src="img/whistle.png" class="homewhistle card">
     <img src="img/yellow_card.jpg" class="homeyellow card">
     <img src="img/red_card.jpg" class="homered card">
@@ -75,24 +75,24 @@
     <img src="img/red_card.jpg" class="awayred card"> -->
     </div>
     <div class="field">
-        <img src="../img/all.jpg" id="field_img">
-        <div class="gomb choose">HOME «-» AWAY</div>
-        <div class="choose">AWAY «-» HOME</div>
-        <div class="choose">Choose a half!</div>
-        <div class="gomb home post top hsw" data-source="hsw"></div>
-        <div class="gomb home post bottom hsw" data-source="hsw"></div>
-        <div class="gomb away post top asw" data-source="asw"></div>
-        <div class="gomb away post bottom asw" data-source="asw"></div>
-        <div class="gomb home grass" id="homegrass"><img src="../img/score.png" class="filed_kep"></div>
-        <div class="gomb away grass" id="awaygrass"><img src="../img/score.png" class="filed_kep"></div>
-        <div class="gomb home whistle" data-source="hfc"><img src="../img/whistle.png" class="whistle_kep"></div>
-        <div class="gomb away whistle" data-source="afc"><img src="../img/whistle.png" class="whistle_kep"></div>
-        <div class="gomb home corner top" data-source="hc"><img src="../img/corner.png" class="corner_kep"></div>
-        <div class="gomb away corner top" data-source="ac"><img src="../img/corner.png" class="corner_kep"></div>
-        <div class="gomb home corner bottom" data-source="hc"><img src="../img/corner.png" class="corner_kep"></div>
-        <div class="gomb away corner bottom" data-source="ac"><img src="../img/corner.png" class="corner_kep"></div>
-        <div class="gomb home sog" data-source="hsog"></div>
-        <div class="gomb away sog" data-source="asog"></div>
+        <img src="../img/soccer_nagyfu.jpg" class="blur" id="field_img">
+        <!-- <div class="gomb choose">HOME «-» AWAY</div>
+        <div class="choose">AWAY «-» HOME</div> -->
+        <div class="choose window" id="choose">Do not forget to setup who start the mach! <br><br>The default is HOME</div>
+        <div class="gomb home post top hsw blur" data-source="hsw"></div>
+        <div class="gomb home post bottom hsw blur" data-source="hsw"></div>
+        <div class="gomb away post top asw blur" data-source="asw"></div>
+        <div class="gomb away post bottom asw blur" data-source="asw"></div>
+        <!-- <div class="gomb home grass" id="homegrass"><img src="../img/score.png" class="filed_kep"></div> -->
+        <div class="gomb away grass blur" id="awaygrass"><img src="../img/score_w.png" class="filed_kep"></div>
+        <div class="gomb home whistle blur" data-source="hfc"><img src="../img/whistle_w.png" class="whistle_kep"></div>
+        <div class="gomb away whistle blur" data-source="afc"><img src="../img/whistle_w.png" class="whistle_kep"></div>
+        <div class="gomb home corner top blur" data-source="hc"><img src="../img/corner_w.png" class="corner_kep"></div>
+        <div class="gomb away corner top blur" data-source="ac"><img src="../img/corner_w.png" class="corner_kep"></div>
+        <div class="gomb home corner bottom blur" data-source="hc"><img src="../img/corner_w.png" class="corner_kep"></div>
+        <div class="gomb away corner bottom blur" data-source="ac"><img src="../img/corner_w.png" class="corner_kep"></div>
+        <div class="gomb home sog blur" data-source="hsog"></div>
+        <div class="gomb away sog blur" data-source="asog"></div>
     </div>
 
 

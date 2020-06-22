@@ -13,8 +13,8 @@ let ayc = 0;
 let arc = 0;
 let ac = 0;
 
-let home = 2;
-let home_c;
+let home = 1;
+let home_c = 0;
 
 let main_start_time = 0;
 let main_end_time = 0;
@@ -30,7 +30,7 @@ let awaypercent = 0;
  
  $(".gomb").click(function (e) {
      if (main_full_time != 0) {
-        //  alert(eval($(this).data('source')));
+        // alert(eval($(this).data('source')));
         eval($(this).data('source')+"++");
         $('#'+$(this).data('source')).text(eval($(this).data('source')));
      }
@@ -54,7 +54,7 @@ function getdate()
 /* ***********************************   START   ************************************ */
  
 $('#start').click(function(){
-    if (home != 2) {
+    if (main_start_time == 0){
         main_start_time = new Date();
         if (Boolean(home)) {
             temp_home_time = main_start_time;
@@ -67,58 +67,58 @@ $('#start').click(function(){
 
 /* ***********************************   TERFELVALSZTO   ************************************ */
 
-$('#homegrass').click(function(){
-    $('#homegrass').css({
-        "border":"5px solid rgb(200, 20, 19)"
-    });
-    $('#awaygrass').css({
-        "border":"3px solid rgb(255, 255, 255)"
-    });
-    $('.choose').css({
-        "display":"none"
-    });
-    home = 1;
-});
-$('#awaygrass').click(function(){
-    $('#awaygrass').css({
-        "border":"5px solid rgb(200, 20, 19)"
-    });
-    $('#homegrass').css({
-        "border":"3px solid rgb(255, 255, 255)"
-    });
-    $('.choose').css({
-        "display":"none"
-    });
-    home = 0;
-});
+// $('#homegrass').click(function(){
+//     $('#homegrass').css({
+//         // "border":"3px solid rgb(200, 20, 19)"
+//     });
+//     $('#awaygrass').css({
+//         "border":"1px solid rgb(114, 223, 223)"
+//     });
+//     $('.choose').css({
+//         "display":"none"
+//     });
+//     home = 1;
+// });
+// $('#awaygrass').click(function(){
+//     $('#awaygrass').css({
+//         // "border":"3px solid rgb(200, 20, 19)"
+//     });
+//     $('#homegrass').css({
+//         "border":"1px solid rgb(114, 223, 223)"
+//     });
+//     $('.choose').css({
+//         "display":"none"
+//     });
+//     home = 0;
+// });
 
 /* ***********************************   LABDABIRTOKLÁS   ************************************ */
 
-$('#homegrass').click(function(){
-    if(Boolean(home) && Boolean (home_c))
-    {
-        if(main_full_time != 0)
-        {
-            temp_home_time = new Date();
-            getdate();
-            time_away = time_away + (temp_home_time - temp_away_time);
-            var totalSeconds = parseInt(time_away / 1000);
-            var minutes = parseInt(totalSeconds / 60);
-            var seconds = totalSeconds % 60;
-            if(seconds<10){seconds = "0"+seconds;}
-            if(minutes<10){minutes = "0"+minutes;}
-            $("#awaytime").text(minutes+" : "+seconds);
-            awaypercent = (time_away / main_full_time * 100).toFixed(2);
-            homepercent = (100 - awaypercent).toFixed(2);
-            $("#awaypercent").text(" "+awaypercent+" %");
-            $("#homepercent").text(" "+homepercent+" %");   
-            home_c = 0;
-        }
-    }
-});
+// $('#homegrass').click(function(){
+//     if(Boolean (home_c))
+//     {
+//         if(main_full_time != 0)
+//         {
+//             temp_home_time = new Date();
+//             getdate();
+//             time_away = time_away + (temp_home_time - temp_away_time);
+//             var totalSeconds = parseInt(time_away / 1000);
+//             var minutes = parseInt(totalSeconds / 60);
+//             var seconds = totalSeconds % 60;
+//             if(seconds<10){seconds = "0"+seconds;}
+//             if(minutes<10){minutes = "0"+minutes;}
+//             $("#awaytime").text(minutes+" : "+seconds);
+//             awaypercent = (time_away / main_full_time * 100).toFixed(2);
+//             homepercent = (100 - awaypercent).toFixed(2);
+//             $("#awaypercent").text(" "+awaypercent+" %");
+//             $("#homepercent").text(" "+homepercent+" %");   
+//             home_c = 0;
+//         }
+//     }
+// });
 $('#awaygrass').click(function(event){
     // event.preventDefault();
-    if(!Boolean(home) && !Boolean(home_c))
+    if(!Boolean(home_c))
     {
         if(main_start_time != 0)
         {
@@ -134,10 +134,32 @@ $('#awaygrass').click(function(event){
             homepercent = (time_home / main_full_time * 100).toFixed(2);
             awaypercent = (100 - homepercent).toFixed(2);
             $("#homepercent").text(" "+homepercent+" %");     
-            $("#awaypercent").text(" "+awaypercent+" %");       
+            $("#awaypercent").text(" "+awaypercent+" %");
+            $(".grass").css('background-color', 'rgb(184, 75, 12)'); 
             home_c = 1;           
         }
     }
+    else
+     {
+         if(main_full_time != 0)
+         {
+             temp_home_time = new Date();
+             getdate();
+             time_away = time_away + (temp_home_time - temp_away_time);
+             var totalSeconds = parseInt(time_away / 1000);
+             var minutes = parseInt(totalSeconds / 60);
+             var seconds = totalSeconds % 60;
+             if(seconds<10){seconds = "0"+seconds;}
+             if(minutes<10){minutes = "0"+minutes;}
+             $("#awaytime").text(minutes+" : "+seconds);
+             awaypercent = (time_away / main_full_time * 100).toFixed(2);
+             homepercent = (100 - awaypercent).toFixed(2);
+             $("#awaypercent").text(" "+awaypercent+" %");
+             $("#homepercent").text(" "+homepercent+" %");
+             $(".grass").css('background-color', 'rgb(12, 184, 184)');
+             home_c = 0;
+         }
+     }
 });
 
 // /* ***********************************   TERULETEK   ************************************ */
@@ -160,3 +182,20 @@ $('#awaygrass').click(function(event){
 //     }
 // })
  
+$(".field").click(function (e) {
+    // $('.choose').css('display','none');
+    $('.choose').fadeOut(70);
+    $(".blur").css("filter","blur(0px)");
+});
+
+ $(document).ready(function(){
+// //    $(".filed").css("filter","blur(3px)");
+// // $(".window").css("filter","blur(0px)");
+$(".blur").css("filter","blur(3px)");
+ $(".choose").fadeIn(100);
+
+   });
+
+
+
+

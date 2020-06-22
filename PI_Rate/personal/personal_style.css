@@ -17,7 +17,7 @@ a{
     text-decoration: none;
 }
 
-button, .homeStats, .awayStats, .gomb.grass{
+button, .gomb.grass{
     cursor: pointer;
 }
 
@@ -30,7 +30,7 @@ button, .homeStats, .awayStats, .gomb.grass{
     align-items: space-between;
     margin-left: 10px;
     margin-top: 5px;
-    display: none;
+    /* display: none; */
 }
 .gombTop{
     -webkit-appearance: none;
@@ -46,7 +46,6 @@ button, .homeStats, .awayStats, .gomb.grass{
     text-shadow:1px 1px 0px #000000;
     font-size: 9px;
     margin-right: 10px;
-    
 }
 
 
@@ -54,7 +53,7 @@ button, .homeStats, .awayStats, .gomb.grass{
 
 #time{
     font-size: 15px;
-    background-color: rgb(85, 85, 85);
+    background-color: rgb(35, 99, 99);
     /* border: 2px solid rgb(200, 200, 190);
     border-bottom: 1px solid rgb(200, 200, 190); */
     /* padding: 0.5%;
@@ -90,7 +89,11 @@ table, td, th{
 td, th {
     padding-top: 0.3%;
     padding-bottom: 0.3%;
-    border: 1px solid rgb(200, 200, 190);
+    border: 1px solid rgb(14, 223, 223);
+}
+th{
+    background-color: rgb(12, 184, 184, 0.2);
+    font-weight: normal;
 }
 table{
     width: 100%;
@@ -105,7 +108,7 @@ td{
 .main{
     width: 100%;
     height: 100%;
-    margin-top: 0.5%;
+    /* margin-top: 0.5%; */
     position: relative;
     text-align: center;
     display: flex;
@@ -117,9 +120,6 @@ td{
     /* margin: auto; */
 }
 
-/* .field_kep{
-    flex-grow: 6;
-} */
 
 /* .home, .away{
     position: absolute;
@@ -183,24 +183,25 @@ td{
 .grass{
     display: flex;
     background-color: rgb(12, 184, 184);
-    width: 40%;
+    width: 60%;
     height: 100%;
     /* top: 45%; */
     /* left: 20%; */
-    border-radius: 40%;
+    border-radius: 10%;
     align-items: center;
     justify-content: center;
-    border: 3px solid rgb(255, 255, 255);
+    border: 1px solid rgb(114, 223, 223);
     box-sizing: border-box;
     /* position: absolute; */
 }
- .away.grass{
+ /* .away.grass{
     background-color: rgb(184, 75, 12);
-}
-.filed_kep{
-    width: 60%;
-    height: 60%;
-    
+} */
+.field_kep{
+    width: 45%;
+    max-width: 50px;
+    height: auto;
+
 }
 
 /* ***********************************   KAPU   ************************************ */
@@ -239,7 +240,7 @@ td{
 
 /* ***********************************   CHOOSE   ************************************ */
 
-.choose{
+/* #choose{
     position: absolute;
     display: flex;
     background-color: rgb(27, 27, 27);
@@ -252,19 +253,21 @@ td{
     font-size: 30px;
     border: 10px solid red;
     z-index: 10;
-}
+    filter: blur(0px);
+} */
 
 /* ***********************************   TABLAZAT   ************************************ */
 
 .tablazat{
     display: block;
-    width: 80%;
+    width: 30%;
 
-    background-color: rgb(95, 95, 95);
+    background-color: rgb(12, 184, 184, 0.2);
 }
 
 .csapat{
     flex-grow: 9;
+    height: 30px;
     /* background-color: royalblue; */
     display: inline-flex;
     justify-content: space-around;
@@ -273,6 +276,7 @@ td{
 
 .bal{
     height: 100%;
+    width: 70%;
 }
 
 .jatekos{
@@ -280,14 +284,17 @@ td{
     width: 6%;
     height: 70%;
     box-shadow: 2px 3px 5px 0px rgb(65, 64, 64);
-	background-color:rgb(167, 167, 167);
-	border-radius: 30%;
-	border:1px solid rgb(196, 195, 195);
+	background-color:rgb(11, 167, 167);
+	border-radius: 10%;
+	border:1px solid rgb(14, 223, 223);
 	cursor:pointer;
 	color:#ffffff;
 	text-decoration:none;
     text-shadow:1px 1px 0px #000000;
     font-size: 12px;
+}
+.jatekos.away{
+    background-color:rgb(184, 75, 12);
 }
 
 .team_name{
@@ -295,7 +302,7 @@ td{
     height: 30px;
     flex-grow: 1;
     max-width: 10%;
-    border-right: 2px solid rgb(167, 167, 167);
+    border-right: 1px solid rgb(14, 223, 223);
     align-items: center;
     justify-content: center;
     /* background-color: green; */
@@ -309,7 +316,7 @@ td{
     align-items: center;
     position: relative;
     box-sizing: border-box;
-    border: 2px solid rgb(167, 167, 167);
+    border: 1px solid rgb(14, 223, 223);
     border-top: 0px;
     border-right: 0px;
 }
@@ -319,7 +326,7 @@ td{
     box-sizing: border-box;
     width: 100%;
     display: inline-flex;
-    border: 2px solid rgb(167, 167, 167);
+    border: 1px solid rgb(14, 223, 223);
     border-right: 0px;
 }
 
@@ -327,12 +334,13 @@ td{
     display: flex;
     height: 70%;
     width: 13%;
+    min-width: 50px;
     background-color: grey;
     margin-left: 3%;
     box-shadow: 2px 3px 5px 0px rgb(65, 64, 64);
-	background-color:rgb(167, 167, 167);
-	border-radius: 30%;
-	border:1px solid rgb(196, 195, 195);
+	background-color:rgb(11, 111, 111);
+	border-radius: 10%;
+	border:1px solid rgb(114, 223, 223);
 	cursor:pointer;
 	color:#ffffff;
 	text-decoration:none;
@@ -340,19 +348,19 @@ td{
     align-items: center;
     justify-content: center;
     font-size: 10px;
-
 }
+
 .overlay {
     position: absolute;
-    top: -130%;
-    left: 3%;
+    top: -450%;
+    left: 1.5%;
     right: 0;
     background-color: rgb(27, 27, 27);
-    border: 1px solid rgb(136, 136, 136);
+    border: 1px solid rgb(14, 223, 223);
     box-shadow: 0px 0px 5px 5px rgb(27, 27, 27);
     display: none;
-    width: 20%;
-    height: 180%;
+    width:15%;
+    height: 450%;
   }
 
 .text{
@@ -362,31 +370,32 @@ td{
     align-items: center;
 }
 .al{
-    width: 36%;
+    width: 80%;
     margin: 8.5% 5%;
-    height: 30px;
+    height: 40px;
 }
 .ballpos{
     margin-left: 5%;
     display: flex;
-    width: 35%;
+    width: 50%;
     height: 90%;
     justify-content: space-around;
     align-items: center;
+    border-left: 1px solid rgb(114, 223, 223);;
 }
 
 .teamStats{
     box-sizing: border-box;
     height: 10%;
     width: 100%;
-    border: 2px solid rgb(200, 200, 190);
+    border: 1px solid rgb(14, 223, 223);
     border-bottom: 0px;
 }
 .homeStats{
     box-sizing: border-box;
     height: 50%;
     width: 100%;
-    border: 2px solid rgb(200, 200, 190);
+    border: 1px solid rgb(14, 223, 223);
     border-bottom: 0px;
     transition: 1s;
 }
@@ -394,18 +403,44 @@ td{
     box-sizing: border-box;
     height: 50%;
     width: 100%;
-    border: 2px solid rgb(200, 200, 190);
+    border: 1px solid rgb(14, 223, 223);
     transition: 1s;
 }
+
 .homeStats:hover+.awayStats { height: 20%; }
 .homeStats:hover { height: 80%; }
-.awayStats:hover+.homeStats { 
-    height: 10%;
- }
-/* .awayStats:hover { height: 80%; } */
+.awayStats:hover~.homeStats { height: 10%; }
+.awayStats:hover { height: 80%; } 
 
+.homeText{
+    background-color: rgb(11, 167, 167);
+    text-shadow:1px 1px 2px #000000;
+}
+.awayText{
+    background-color: rgb(184, 75, 12);
+    text-shadow:1px 1px 2px #000000;
+}
 .middle{
     position: relative;
+    filter: blur(0px);
+    border-left: 1px solid rgb(14, 223, 223);
+}
+.window{
+    position: absolute;
+    display: none;
+    background-color: rgb(27, 27, 27);
+    border: 2px solid rgb(11, 111, 111);
+    border-top: 20px solid rgb(11, 111, 111);
+    padding: 5% 8%;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    font-size: 15px;
+    border-radius: 5%;
+    /* filter: blur(0px); */
 }
 .kozep{
     position: absolute;
@@ -431,91 +466,95 @@ td{
 .kozep.away{
     background-color:rgb(184, 75, 12);
 }
-.k1{
+.h1{
     top: 45%;
     left: 2%;
 }
-.k2{
+.h2{
     top: 23%;
-    left: 16.5%;
+    left: 12%;
 }
-.k3{
+.h3{
     top: 45%;
     left: 12%;
 }
-.k4{
+.h4{
     bottom: 23%;
-    left: 16.5%;
+    left: 12%;
 }
-.k5{
+.h5.kozep{
     top: 9%;
-    left: 27%;
+    left: 23%;
+    
 }
-.k6{
+.h6{
     top: 34%;
-    left: 27%;
+    left: 25%;
 }
-.k7{
+.h7{
     bottom: 34%;
-    left: 27%;
+    left: 25%;
 }
-.k8{
-    bottom: 12%;
-    left: 27%;
+.h8{
+    bottom: 10%;
+    left: 23%;
 }
-.k9{
-    top: 23%;
-    left: 38%;
+.h9{
+    top: 19%;
+    left: 33%;
 }
-.k10{
+.h10{
     top: 45%;
     left: 38%;
 }
-.k11{
-    bottom: 23%;
-    left: 38%;
+.h11{
+    bottom: 18%;
+    left: 33%;
 }
-.k22{
+.a11{
     bottom: 23%;
     right: 41%;
 }
-.k21{
+.a10{
     top: 45%;
     right: 41%;
 }
-.k20{
+.a9{
     top: 23%;
     right: 41%;
 }
-.k16{
+.a5.kozep{
     top: 9%;
     right: 30%;
 }
-.k18{
+.a7{
     top: 34%;
     right: 30%;
 }
-.k17{
+.a6{
     bottom: 34%;
     right: 30%;
 }
-.k19{
+.a8{
     bottom: 12%;
     right: 30%;
 }
-.k15{
+.a4{
     bottom: 23%;
     right: 19.5%;
 }
-.k13{
+.a2{
     top: 23%;
     right: 19.5%;
 }
-.k14{
+.a3{
     top: 45%;
     right: 15%;
 }
-.k12{
+.a1{
     top: 45%;
     right: 5%;
+}
+.home:active, .away:active, .gomb:active, .bottomButton:active, #start:active{
+    background-color: rgb(177, 137, 7);
 }
