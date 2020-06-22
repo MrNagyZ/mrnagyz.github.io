@@ -79,27 +79,25 @@ a{
 table{
     display: block;
     overflow-x: auto;
-    /* white-space: nowrap; */
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+    background-color: violet;
+  
 }
-table, td, th{
+table, td{
     text-align: center;
     border-collapse: collapse;
 }
-td, th{
-    border: 1px solid rgb(114, 223, 223);
-}
-td, th {
-    padding-top: 0.6%;
-    padding-bottom: 0.6%;
-}
-table{
-    width: 100%;
-}
 td{
-    width: 7.17%;
+    border: 1px solid rgb(114, 223, 223);
+    /* padding-top: 0.6%;
+    padding-bottom: 0.6%; */
+    box-sizing: border-box;
+    width: 7.14%;
 }
-/* .kozep{
-    border-right-width: 4px;
+/* .size{
+    width: 7.14%;
 } */
 /* .homeField{
     width: 38.5%;
