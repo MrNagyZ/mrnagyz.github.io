@@ -335,7 +335,12 @@ $(".shot.al").click(function () {
     $(".overlay").fadeOut(100);
     $(".middle").css("filter","blur(0px)");
 });
- 
+
+$(".middle").click(function (e) {
+    $(".overlay").fadeOut(100);
+    $(".middle").css("filter","blur(0px)");
+});
+
 $(".middle").click(function (e) {
     // $('.choose').css('display','none');
     $('.choose').fadeOut(70);
