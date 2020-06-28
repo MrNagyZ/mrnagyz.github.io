@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PI Rate statistics</title>
+    <link rel="stylesheet" href="ball_style.css">
+</head>
+<body>
+    <div class="gombok">
+        <input type="button" value="START" id="start" class="gombTop">
+    </div>
+    <div class="stat">
+        <table >
+            <tr>
+                <td class="homeText topTable">HOME <br><span data-source="htn">HOME TEAM NAME</span></td>
+                <td id="time">00 : 00</td>
+                <td class="awayText topTable">AWAY <br><span data-source="atn">AWAY TEAM NAME</span></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td class="th">TIME: <span id="hometime"> 00 : 00</span></td>
+                <td class="th">TIME: <span id="awaytime"> 00 : 00</span> </td>
+            </tr>
+            <tr>
+                <td class="th">POS:<span id="homepercent"> 0,00%</span></td>
+                <td class="th">POS:<span id="awaypercent"> 0,00%</span></td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="field">
+        <img src="../img/soccer_nagyfu.jpg" id="field_img">
+        <!-- <div class="home grass" id="homegrass"><img src="../img/score.png" class="filed_kep"></div> -->
+        <div class="away grass" id="awaygrass"><img src="../img/score.png" class="filed_kep"></div>
+    </div>
+
+    <script src="../jquery.js"></script>
+    <script src="../scripts.js"></script>
+</body>
+</html>

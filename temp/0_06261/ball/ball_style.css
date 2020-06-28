@@ -1,0 +1,145 @@
+body{
+    max-width: 900px;
+    max-height: 600px;
+    margin: auto;
+    color: rgb(200, 200, 190);
+    background-color: rgb(27, 27, 27);
+    display: block;
+}
+
+.home:active, .away:active, .gomb:active, #start:active{
+    background-color: rgb(177, 137, 7);
+}
+/* ***********************************   TOP   ************************************ */
+
+.gombok{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+input{
+    margin-left: 10px;
+}
+.gombTop{
+    -webkit-appearance: none;
+    /* width: 6%; */
+    height: 60%;
+    /* box-shadow: 2px 3px 5px 0px rgb(65, 64, 64); */
+	background-color:rgb(49, 49, 49);
+	border-radius: 10%;
+	border:1px solid rgb(196, 195, 195);
+	cursor:pointer;
+	color:#ffffff;
+	text-decoration:none;
+    text-shadow:1px 1px 0px #000000;
+    font-size: 9px;
+    margin-right: 10px;
+}
+
+/* ***********************************   EREDMÉNYEK   ************************************ */
+
+#time{
+    font-size: 35px;
+    border-bottom: 0px solid rgb(114, 223, 223);
+    background-color: rgb(35, 99, 99);
+    text-align: center;
+}
+.stat{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;  
+}
+
+table{
+    display: block;
+    overflow-x: auto;
+    /* white-space: nowrap; */
+}
+.topTable{
+    border-bottom: 0px;
+}
+table, td, th{
+    text-align: center;
+    border-collapse: collapse;
+}
+td, th {
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    border: 1px solid rgb(14, 223, 223);
+}
+th{
+    background-color: rgb(12, 184, 184, 0.2);
+    font-weight: normal;
+}
+table{
+    width: 100%;
+}
+td{
+    width: 7.17%;
+}
+.th{
+    background-color: rgb(12, 184, 184, 0.2);
+    font-weight: normal;
+}
+.homeText{
+    background-color: rgb(11, 167, 167);
+    text-shadow:1px 1px 2px #000000;
+}
+.awayText{
+    background-color: rgb(184, 75, 12);
+    text-shadow:1px 1px 2px #000000;
+}
+
+/* ***********************************   PÁLYA Általános   ************************************ */
+
+.field{
+    width: 100%;
+    height: 100%;
+    padding: 0.5%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid rgb(114, 223, 223);
+    border-top: 0px;
+    /* filter: blur(1px); */
+}
+
+#field_img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.home, .away{
+    position: absolute;
+    cursor: pointer;
+}
+
+/* ***********************************   PÁLYA   ************************************ */
+
+.grass{
+    display: flex;
+    background-color: rgb(12, 184, 184);
+    width: 40%;
+    height: 50%;
+    top: 54%;
+    left: 20%;
+    border-radius: 10%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(114, 223, 223);
+    box-shadow: 2px 3px 5px 0px rgb(65, 64, 64);
+}
+.away.grass{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.filed_kep{
+    width: 40%;
+    height: auto;
+}

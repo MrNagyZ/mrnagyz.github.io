@@ -1,5 +1,5 @@
 html{
-    height: 98%;
+    /* height: 100%; */
 }
 
 body{
@@ -79,7 +79,6 @@ button, .gomb.grass{
 table{
     display: block;
     overflow-x: auto;
-    table-layout: fixed ;
     /* white-space: nowrap; */
 }
 table, td, th{
@@ -101,10 +100,6 @@ table{
 }
 td{
     width: 7.17%;
-}
-.statTable{
-    position: absolute;
-    font-size: 10px;
 }
 
 
@@ -377,7 +372,6 @@ td{
     width: 100%;
     border: 1px solid rgb(14, 223, 223);
     border-bottom: 0px;
-    
 }
 .homeStats{
     box-sizing: border-box;
@@ -386,8 +380,6 @@ td{
     border: 1px solid rgb(14, 223, 223);
     border-bottom: 0px;
     transition: 1s;
-    position: relative;
-    overflow:auto;
 }
 .awayStats{
     box-sizing: border-box;
@@ -395,15 +387,12 @@ td{
     width: 100%;
     border: 1px solid rgb(14, 223, 223);
     transition: 1s;
-    position: relative;
-    overflow: auto;
-
 }
 
-/* .homeStats:hover+.awayStats { height: 20%; }
+.homeStats:hover+.awayStats { height: 20%; }
 .homeStats:hover { height: 80%; }
 .awayStats:hover~.homeStats { height: 10%; }
-.awayStats:hover { height: 80%; }  */
+.awayStats:hover { height: 80%; } 
 
 .homeText{
     background-color: rgb(11, 167, 167);
@@ -548,6 +537,6 @@ td{
     top: 45%;
     right: 5%;
 }
-.gomb:active, .akcioJatekos:active, .bottomButton:active, #start:active, #stop:active{
+.gomb:active, .bottomButton:active, #start:active, #stop:active{
     background-color: rgb(177, 137, 7);
 }
