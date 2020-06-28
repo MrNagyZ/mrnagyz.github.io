@@ -16,7 +16,6 @@ let ac = 0;
 let jv = 0;
 let jatekosClick = 0;
 let jatekosClickVal = 0;
-let jatekosClickID = 0;
 let ujjatekosClick = 0;
 let ujjatekosClickVal = 0;
 let ujjatekosClickID = 0;
@@ -333,36 +332,27 @@ $('.jatekos').click(function(event){
     jatekosClick = $(this).data('source');
     jatekosClickVal = $(this).val();
     $($(this)).css('background-color','rgb(177, 137, 7)');
-    if(jv == 100){
-        if(nyomott[0] == "h"){
-            $("#"+jatekosClickID).css({"background":"rgb(12, 184, 184)"});
-        }
-        else{
-            $("#"+jatekosClickID).css({"background":"rgb(184, 75, 12)"});
-        }
-        nyomott = $(this).data('source');
-        jatekosClickID = $(this).attr('id');
-    }else{
-        
-    }
+    nyomott = $(this).data('source');
+    // alert($(this).data("source"));
+    // alert($(this).val());
+    // alert($(this).id);
 });
 $('.kozep').click(function(event){
+    // alert($(this).data("source"));
+    // alert($(this).val());
+    //alert($(this).attr('id'));
     ujjatekosClick = $(this).data('source');
     ujjatekosClickVal = $(this).val();
     ujjatekosClickID = $(this).attr('id');
     if(ujjatekosClick[0] == jatekosClick[0]){
         if(jv == 100){ 
-            $(this).val(jatekosClickVal);
-            $(this).data("source", jatekosClick);
-            jv = 0;
-            $("#k"+ujjatekosClick).data("source", jatekosClick);
-            $("#k"+jatekosClick).data("source", ujjatekosClick);
-            $("#k"+jatekosClick).val(ujjatekosClickVal);
-            var temp = $("#k"+ujjatekosClick).attr('id'); //9
-            $("#k"+ujjatekosClick).attr('id', 0);
-            var temp2 = $("#k"+jatekosClick).attr('id'); //6
-            $("#k"+jatekosClick).attr('id', temp);
-            $("#0").attr('id', temp2);
+            //$(this).val(jatekosClickVal);           // 1
+            alert($("#k"+jatekosClickID[1]+jatekosClickVal).val());
+            //$("#k"+jatekosClickID[1]+jatekosClickVal).val($(this).val()); 
+            //$(this).data("source", jatekosClick);   // 1
+            jv = 0; 
+
+            //$($(this)).attr('id', $("#k"+jatekosClick).attr('id'));
             if(nyomott[0] == "h"){
                 $("input[data-source="+nyomott+"]").css({"background":"rgb(12, 184, 184)"});
             }
@@ -371,8 +361,8 @@ $('.kozep').click(function(event){
             }
         }
         else{
-            //alert($(this).data("source"));
-            //alert($(this).val());
+            alert($(this).data("source"));
+            alert($(this).val());
             alert($(this).attr('id'));
         }
     }

@@ -1,0 +1,11 @@
+{
+  "name": "pi_rate",
+  "version": "1.0.0",
+  "main": "jquery.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "NZ",
+  "license": "ISC",
+  "description": ""
+}
